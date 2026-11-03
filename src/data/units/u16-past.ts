@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 16,
+  stage: 4,
+  level: 'A2+',
+  emoji: '📸',
+  title: 'Past Stories',
+  vi: 'Kể chuyện đã qua',
+  goal: 'Kể lại cuối tuần, chuyến đi hay một ngày đã qua bằng thì quá khứ đơn.',
+  words: [
+    'yesterday | hôm qua | ˈjestərdeɪ | ⏮️ | I was very busy yesterday. | Hôm qua tôi rất bận.',
+    'last | trước, vừa qua | læst | 🔚 | I visited Hue last year. | Năm ngoái tôi đã đến Huế.',
+    'ago | cách đây | əˈɡoʊ | ⏳ | I moved to Hanoi five years ago. | Tôi chuyển đến Hà Nội cách đây năm năm.',
+    'went | đã đi (quá khứ của go) | went | 🚶 | We went to the beach last weekend. | Cuối tuần trước chúng tôi đi biển.',
+    'saw | đã thấy, đã xem (quá khứ của see) | sɔː | 👁️ | I saw a great movie on Sunday. | Chủ nhật tôi xem một bộ phim hay.',
+    'ate | đã ăn (quá khứ của eat) | eɪt | 🍽️ | I ate pho for breakfast. | Tôi đã ăn phở cho bữa sáng.',
+    'had | đã có (quá khứ của have) | hæd | 🎊 | We had a great time. | Chúng tôi đã có khoảng thời gian tuyệt vời.',
+    'bought | đã mua (quá khứ của buy) | bɔːt | 🛒 | I bought a new phone last month. | Tháng trước tôi mua điện thoại mới.',
+    'met | đã gặp (quá khứ của meet) | met | 🙌 | I met my wife at university. | Tôi gặp vợ tôi ở trường đại học.',
+    'was | đã là, đã ở (quá khứ của is) | wʌz | ⏪ | The weather was perfect. | Thời tiết thật hoàn hảo.',
+    'happened | đã xảy ra | ˈhæpənd | ❓ | What happened? | Chuyện gì đã xảy ra?',
+    'trip | chuyến đi | trɪp | 🚐 | How was your trip? | Chuyến đi của bạn thế nào?',
+    'fun | vui | fʌn | 😄 | The party was really fun. | Bữa tiệc thật sự rất vui.',
+    'forgot | đã quên (quá khứ của forget) | fərˈɡɑːt | 🤦 | I forgot my keys at home. | Tôi để quên chìa khóa ở nhà.',
+    'then | sau đó | ðen | ⤵️ | First we had lunch, then we went shopping. | Đầu tiên chúng tôi ăn trưa, sau đó đi mua sắm.',
+  ],
+  patterns: [
+    {
+      form: 'Động từ + -ed (có quy tắc)',
+      vi: 'Quá khứ đơn — động từ có quy tắc',
+      note: 'Việc đã xong trong quá khứ: thêm -ed. work → worked, visit → visited, stay → stayed. Hay đi với: yesterday, last week, … ago.',
+      ex: [
+        'I worked late yesterday. | Hôm qua tôi làm muộn.',
+        'We visited my grandparents last weekend. | Cuối tuần trước chúng tôi đến thăm ông bà.',
+        'She stayed at home all day. | Cô ấy ở nhà cả ngày.',
+      ],
+    },
+    {
+      form: 'go → went, see → saw, eat → ate…',
+      vi: 'Quá khứ đơn — động từ bất quy tắc',
+      note: 'Phải học thuộc: go → went, see → saw, eat → ate, buy → bought, have → had, meet → met. Mẹo: học theo cặp và đọc to nhiều lần.',
+      ex: [
+        'I went to Da Lat last month. | Tháng trước tôi đi Đà Lạt.',
+        'We ate seafood by the sea. | Chúng tôi ăn hải sản bên bờ biển.',
+        'He bought a gift for his wife. | Anh ấy mua quà cho vợ.',
+      ],
+    },
+    {
+      form: "Did you …? — Yes, I did. / No, I didn't.",
+      vi: 'Câu hỏi và phủ định ở quá khứ',
+      note: 'Dùng did/didn\'t, động từ trở về nguyên mẫu: "Did you go?" (không phải "Did you went?").',
+      ex: [
+        'Did you have a good weekend? | Cuối tuần của bạn vui chứ?',
+        'Yes, I did. It was great. | Có. Rất tuyệt.',
+        "I didn't go out last night. | Tối qua tôi không ra ngoài.",
+      ],
+    },
+    {
+      form: 'How was …? — It was …',
+      vi: 'Hỏi cảm nhận về việc đã qua',
+      note: 'How was + sự việc? Trả lời: It was great / amazing / OK / terrible.',
+      ex: [
+        'How was your weekend? | Cuối tuần của bạn thế nào?',
+        'It was amazing! | Tuyệt vời lắm!',
+        'The food was a bit salty. | Đồ ăn hơi mặn một chút.',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'How was your weekend?',
+      vi: 'Cuối tuần thế nào?',
+      a: 'Chris',
+      b: 'Quan',
+      lines: [
+        'A: Hi Quan! How was your weekend? | Chào Quân! Cuối tuần của anh thế nào?',
+        'B: It was great, thanks. I went to Ha Long Bay with my family. | Tuyệt lắm, cảm ơn. Tôi đi Vịnh Hạ Long với gia đình.',
+        'A: Wow! What did you do there? | Chà! Anh đã làm gì ở đó?',
+        'B: We stayed on a boat for one night and swam in the sea. | Chúng tôi ở trên thuyền một đêm và bơi ở biển.',
+        'A: That sounds amazing. Did the kids enjoy it? | Nghe tuyệt quá. Bọn trẻ có thích không?',
+        'B: Yes, they loved it! And you? What did you do? | Có, chúng rất thích! Còn anh? Anh đã làm gì?',
+        'A: Nothing special. I stayed home and watched movies. | Không có gì đặc biệt. Tôi ở nhà xem phim.',
+      ],
+    },
+    {
+      title: 'A bad day',
+      vi: 'Một ngày tồi tệ',
+      a: 'Hoa',
+      b: 'Sam',
+      lines: [
+        'A: You look upset. What happened? | Trông bạn buồn thế. Chuyện gì vậy?',
+        'B: I had a terrible day. I got up late and missed the bus. | Mình có một ngày tệ quá. Mình dậy muộn và lỡ xe buýt.',
+        'A: Oh no! Were you late for work? | Ôi không! Bạn có đi làm muộn không?',
+        'B: Yes, thirty minutes late. And then I forgot my laptop at home! | Có, muộn ba mươi phút. Rồi mình còn để quên laptop ở nhà!',
+        "A: I'm sorry to hear that. Let's get a coffee. My treat! | Tiếc quá. Đi uống cà phê đi. Mình mời!",
+        "B: Thanks, Hoa. You're the best. | Cảm ơn Hoa. Bạn tuyệt nhất.",
+      ],
+    },
+  ],
+  tip: 'Đuôi -ed có 3 cách đọc: /t/ sau âm vô thanh (worked, stopped), /d/ sau âm hữu thanh (played, stayed), /ɪd/ sau t và d (wanted, needed).',
+});

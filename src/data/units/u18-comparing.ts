@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 18,
+  stage: 4,
+  level: 'A2+',
+  emoji: '⚖️',
+  title: 'Comparing',
+  vi: 'So sánh & miêu tả',
+  goal: 'Miêu tả và so sánh người, nơi chốn, đồ vật: hơn, nhất, bằng.',
+  words: [
+    'big | to, lớn | bɪɡ | 🐘 | Hanoi is a big city. | Hà Nội là một thành phố lớn.',
+    'tall | cao | tɔːl | 🦒 | My brother is very tall. | Anh trai tôi rất cao.',
+    'short | thấp, ngắn | ʃɔːrt | 🩳 | She has short hair. | Cô ấy có mái tóc ngắn.',
+    'fast | nhanh | fæst | 🏎️ | The new train is very fast. | Tàu mới chạy rất nhanh.',
+    'slow | chậm | sloʊ | 🐌 | The internet is very slow today. | Hôm nay mạng rất chậm.',
+    'easy | dễ | ˈiːzi | 🆗 | This exercise is easy. | Bài tập này dễ.',
+    'difficult | khó | ˈdɪfɪkəlt | 🧗 | English grammar is not too difficult. | Ngữ pháp tiếng Anh không quá khó.',
+    'beautiful | đẹp | ˈbjuːtɪfl | 🌺 | Hoi An is a beautiful town. | Hội An là một thị trấn đẹp.',
+    'modern | hiện đại | ˈmɑːdərn | 🏗️ | This building is very modern. | Tòa nhà này rất hiện đại.',
+    'quiet | yên tĩnh | ˈkwaɪət | 🤫 | The countryside is quiet and peaceful. | Nông thôn yên tĩnh và thanh bình.',
+    'noisy | ồn ào | ˈnɔɪzi | 🔊 | The street is too noisy at night. | Con phố quá ồn vào ban đêm.',
+    'crowded | đông đúc | ˈkraʊdɪd | 👨‍👩‍👧‍👦 | The market is always crowded. | Chợ lúc nào cũng đông.',
+    'best | tốt nhất, ngon nhất | best | 🥇 | This is the best pho in town. | Đây là phở ngon nhất phố.',
+    'worse | tệ hơn | wɜːrs | 👎 | The traffic is worse than last year. | Giao thông tệ hơn năm ngoái.',
+    'than | hơn (khi so sánh) | ðæn | 🆚 | Tea is cheaper than coffee here. | Ở đây trà rẻ hơn cà phê.',
+  ],
+  patterns: [
+    {
+      form: 'tính từ ngắn + -er + than',
+      vi: 'So sánh hơn với tính từ ngắn',
+      note: 'Tính từ 1 âm tiết thêm -er: tall → taller, cheap → cheaper. Tận cùng -y đổi thành -ier: easy → easier. Gấp đôi phụ âm cuối: big → bigger.',
+      ex: [
+        'My city is bigger than my hometown. | Thành phố tôi lớn hơn quê tôi.',
+        'Today is hotter than yesterday. | Hôm nay nóng hơn hôm qua.',
+        'This way is easier. | Cách này dễ hơn.',
+      ],
+    },
+    {
+      form: 'more + tính từ dài + than',
+      vi: 'So sánh hơn với tính từ dài',
+      note: 'Tính từ từ 2 âm tiết trở lên dùng "more": more expensive, more beautiful, more interesting.',
+      ex: [
+        'Da Nang is more modern than Hue. | Đà Nẵng hiện đại hơn Huế.',
+        'This phone is more expensive than that one. | Điện thoại này đắt hơn cái kia.',
+        'Learning with friends is more fun. | Học cùng bạn bè vui hơn.',
+      ],
+    },
+    {
+      form: 'the + -est / the most …',
+      vi: 'So sánh nhất',
+      note: 'Ngắn: the tallest, the cheapest. Dài: the most beautiful. Bất quy tắc: good → better → the best, bad → worse → the worst.',
+      ex: [
+        'This is the cheapest hotel in the area. | Đây là khách sạn rẻ nhất khu này.',
+        'Ha Long Bay is the most beautiful place I know. | Vịnh Hạ Long là nơi đẹp nhất tôi biết.',
+        'Who is the best player on the team? | Ai là cầu thủ giỏi nhất đội?',
+      ],
+    },
+    {
+      form: 'as … as / not as … as',
+      vi: 'So sánh bằng',
+      note: 'as + tính từ + as = bằng. not as … as = không bằng — cách nói nhẹ nhàng thay cho "kém hơn".',
+      ex: [
+        'My English is not as good as yours. | Tiếng Anh của tôi không giỏi bằng bạn.',
+        'This room is as big as that one. | Phòng này rộng bằng phòng kia.',
+        "It's not as hot here as in Saigon. | Ở đây không nóng bằng Sài Gòn.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'City or countryside?',
+      vi: 'Thành phố hay nông thôn?',
+      a: 'Oliver',
+      b: 'Quan',
+      lines: [
+        'A: Do you prefer living in the city or the countryside? | Anh thích sống ở thành phố hay nông thôn hơn?',
+        "B: The city, I think. It's more convenient. | Thành phố, tôi nghĩ vậy. Nó tiện hơn.",
+        'A: But the city is noisier and more crowded. | Nhưng thành phố ồn hơn và đông hơn.',
+        "B: That's true. The countryside is quieter and the air is cleaner. | Đúng vậy. Nông thôn yên tĩnh hơn và không khí sạch hơn.",
+        "A: And life is slower. I think it's better for families. | Và cuộc sống chậm hơn. Tôi nghĩ nó tốt hơn cho gia đình.",
+        'B: Maybe, but there are more jobs in the city. | Có thể, nhưng ở thành phố có nhiều việc làm hơn.',
+      ],
+    },
+    {
+      title: 'Which phone?',
+      vi: 'Chọn điện thoại nào?',
+      a: 'Linh',
+      b: 'Seller',
+      lines: [
+        'A: Which phone is better, this one or that one? | Điện thoại nào tốt hơn, cái này hay cái kia?',
+        'B: This one is faster and the camera is better. | Cái này nhanh hơn và camera tốt hơn.',
+        "A: But it's more expensive, right? | Nhưng nó đắt hơn, phải không?",
+        "B: Yes, it's about two million dong more. | Vâng, đắt hơn khoảng hai triệu đồng.",
+        'A: Hmm. Is the other one as good as this one? | Hmm. Cái kia có tốt bằng cái này không?',
+        "B: Not quite, but it's the best phone for the price. | Không hẳn, nhưng nó là điện thoại tốt nhất trong tầm giá.",
+        "A: OK, I'll take the cheaper one. | Được, tôi lấy cái rẻ hơn.",
+      ],
+    },
+  ],
+  tip: 'Học thuộc 2 cặp bất quy tắc: good → better → the best, bad → worse → the worst. Và nói "more fun", không nói "funner".',
+});

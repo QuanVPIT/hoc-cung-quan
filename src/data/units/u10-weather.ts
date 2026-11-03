@@ -1,0 +1,101 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 10,
+  stage: 2,
+  level: 'A1+',
+  emoji: '🌤️',
+  title: 'Weather & Seasons',
+  vi: 'Thời tiết & các mùa',
+  goal: 'Nói về thời tiết, dự đoán trời mưa nắng và mùa yêu thích.',
+  words: [
+    'weather | thời tiết | ˈweðər | 🌤️ | How is the weather today? | Hôm nay thời tiết thế nào?',
+    "sunny | nắng | ˈsʌni | ☀️ | It's sunny and warm. | Trời nắng và ấm.",
+    "rain | mưa | reɪn | 🌧️ | It's going to rain this afternoon. | Chiều nay trời sẽ mưa.",
+    "cloudy | nhiều mây | ˈklaʊdi | ☁️ | It's cloudy, but not cold. | Trời nhiều mây, nhưng không lạnh.",
+    "windy | có gió | ˈwɪndi | 🌬️ | It's very windy at the beach. | Ở bãi biển gió rất to.",
+    'hot | nóng | hɑːt | 🥵 | Saigon is hot all year. | Sài Gòn nóng quanh năm.',
+    "cold | lạnh | koʊld | 🥶 | It's cold in Hanoi in winter. | Mùa đông ở Hà Nội trời lạnh.",
+    'warm | ấm áp | wɔːrm | 😊 | Spring is warm and nice. | Mùa xuân ấm áp dễ chịu.',
+    'cool | mát mẻ | kuːl | 🍃 | Da Lat is cool all year round. | Đà Lạt mát mẻ quanh năm.',
+    'season | mùa | ˈsiːzn | 🍂 | My favorite season is autumn. | Mùa yêu thích của tôi là mùa thu.',
+    'spring | mùa xuân | sprɪŋ | 🌸 | Tet is in spring. | Tết vào mùa xuân.',
+    'summer | mùa hè | ˈsʌmər | 🌞 | We go to the sea in summer. | Chúng tôi đi biển vào mùa hè.',
+    'winter | mùa đông | ˈwɪntər | ☃️ | Winter in the north is cold and wet. | Mùa đông miền Bắc lạnh và ẩm.',
+    'umbrella | cái ô | ʌmˈbrelə | ☂️ | Take an umbrella with you. | Mang theo ô nhé.',
+    "degrees | độ | dɪˈɡriːz | 🔆 | It's thirty-five degrees today. | Hôm nay ba mươi lăm độ.",
+  ],
+  patterns: [
+    {
+      form: "What's the weather like? — It's + tính từ.",
+      vi: 'Hỏi thời tiết',
+      note: 'Tính từ thời tiết thường thêm -y: sun → sunny, cloud → cloudy, wind → windy, rain → rainy.',
+      ex: [
+        "What's the weather like in Da Lat? | Thời tiết ở Đà Lạt thế nào?",
+        "It's cool and foggy. | Trời mát và có sương mù.",
+        "It's raining now. | Bây giờ trời đang mưa.",
+      ],
+    },
+    {
+      form: "It's going to + động từ.",
+      vi: 'Dự đoán sắp xảy ra',
+      note: "Dùng khi có dấu hiệu rõ ràng: thấy mây đen → It's going to rain.",
+      ex: [
+        "Look at those clouds! It's going to rain. | Nhìn đám mây kìa! Trời sắp mưa.",
+        "It's going to be hot tomorrow. | Ngày mai trời sẽ nóng.",
+        'Is it going to snow? | Trời sắp có tuyết à?',
+      ],
+    },
+    {
+      form: 'My favorite season is … because …',
+      vi: 'Nói mùa yêu thích',
+      note: 'Thêm lý do với "because" giúp câu trả lời tự nhiên và dài hơn.',
+      ex: [
+        "My favorite season is autumn because it's cool. | Mùa tôi thích nhất là mùa thu vì trời mát.",
+        'I like summer because I can swim. | Tôi thích mùa hè vì được đi bơi.',
+        "I don't like winter because it's too cold. | Tôi không thích mùa đông vì trời quá lạnh.",
+      ],
+    },
+    {
+      form: "in + mùa / It's + số + degrees.",
+      vi: 'Nói mùa và nhiệt độ',
+      note: 'in summer, in winter (không cần "the"). Nhiệt độ: thirty degrees Celsius (30°C).',
+      ex: [
+        "It's very hot in summer. | Mùa hè trời rất nóng.",
+        "It's about twenty degrees today. | Hôm nay khoảng hai mươi độ.",
+        'Sometimes it snows in Sa Pa in winter. | Thỉnh thoảng mùa đông ở Sa Pa có tuyết.',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Small talk',
+      vi: 'Chuyện phiếm về thời tiết',
+      a: 'Peter',
+      b: 'Quan',
+      lines: [
+        "A: Lovely day, isn't it? | Hôm nay đẹp trời nhỉ?",
+        "B: Yes, it's sunny and not too hot. | Vâng, trời nắng mà không quá nóng.",
+        'A: Is it always this nice in Hanoi? | Hà Nội lúc nào cũng đẹp thế này à?',
+        'B: Not always. Summer is very hot, and winter is cold. | Không phải lúc nào cũng vậy. Mùa hè rất nóng, còn mùa đông thì lạnh.',
+        "A: What's the best season to visit? | Mùa nào đến thăm là đẹp nhất?",
+        "B: Autumn, I think. It's cool and very beautiful. | Mùa thu, tôi nghĩ vậy. Trời mát và rất đẹp.",
+      ],
+    },
+    {
+      title: 'Take an umbrella',
+      vi: 'Mang ô theo',
+      a: 'Mom',
+      b: 'Minh',
+      lines: [
+        'A: Minh, take an umbrella with you. | Minh, mang ô theo đi con.',
+        "B: Why? It's sunny now. | Sao ạ? Giờ đang nắng mà.",
+        "A: The weather forecast says it's going to rain this afternoon. | Dự báo thời tiết nói chiều nay trời sẽ mưa.",
+        "B: Really? OK, I'll take it. | Thật ạ? Vâng, con sẽ mang.",
+        "A: And wear a jacket. It's going to be windy too. | Và mặc áo khoác nữa. Trời cũng sẽ có gió.",
+        'B: OK, Mom. See you tonight! | Vâng mẹ. Tối gặp mẹ nhé!',
+      ],
+    },
+  ],
+  tip: 'Nói chuyện thời tiết là cách mở đầu "small talk" an toàn nhất với người nước ngoài: "Nice weather today, isn\'t it?"',
+});

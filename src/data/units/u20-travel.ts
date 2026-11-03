@@ -1,0 +1,103 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 20,
+  stage: 4,
+  level: 'A2+',
+  emoji: '✈️',
+  title: 'Travel',
+  vi: 'Du lịch',
+  goal: 'Qua cửa khẩu, hỏi dịch vụ khi đi du lịch, nhờ người lạ và kể trải nghiệm.',
+  words: [
+    'travel | du lịch, đi lại | ˈtrævl | 🌍 | I love to travel with my family. | Tôi thích đi du lịch cùng gia đình.',
+    "passport | hộ chiếu | ˈpæspɔːrt | 🛂 | Don't forget your passport! | Đừng quên hộ chiếu!",
+    'luggage | hành lý | ˈlʌɡɪdʒ | 🧳 | My luggage is too heavy. | Hành lý của tôi nặng quá.',
+    'flight | chuyến bay | flaɪt | 🛬 | Our flight is delayed. | Chuyến bay của chúng tôi bị hoãn.',
+    'boarding pass | thẻ lên máy bay | ˈbɔːrdɪŋ pæs | 🎟️ | Please show your boarding pass. | Vui lòng xuất trình thẻ lên máy bay.',
+    'sightseeing | tham quan | ˈsaɪtsiːɪŋ | 📸 | We went sightseeing in the old town. | Chúng tôi đi tham quan phố cổ.',
+    'tourist | khách du lịch | ˈtʊrɪst | 🤳 | Hoi An is full of tourists. | Hội An đầy khách du lịch.',
+    'souvenir | quà lưu niệm | ˌsuːvəˈnɪr | 🎁 | I bought a souvenir for my mom. | Tôi mua quà lưu niệm cho mẹ.',
+    "beach | bãi biển | biːtʃ | 🏖️ | Let's go to the beach this summer. | Mùa hè này đi biển nhé.",
+    'mountain | núi | ˈmaʊntn | ⛰️ | Sa Pa has beautiful mountains. | Sa Pa có những ngọn núi đẹp.',
+    'abroad | ở nước ngoài | əˈbrɔːd | 🌐 | My sister works abroad. | Chị tôi làm việc ở nước ngoài.',
+    'guide | hướng dẫn viên | ɡaɪd | 🚩 | Our tour guide speaks English well. | Hướng dẫn viên của chúng tôi nói tiếng Anh giỏi.',
+    'exchange | đổi (tiền) | ɪksˈtʃeɪndʒ | 💱 | Where can I exchange money? | Tôi có thể đổi tiền ở đâu?',
+    'experience | trải nghiệm | ɪkˈspɪriəns | ✨ | It was a wonderful experience. | Đó là một trải nghiệm tuyệt vời.',
+    'ever | đã từng | ˈevər | ❔ | Have you ever tried durian? | Bạn đã từng ăn sầu riêng chưa?',
+  ],
+  patterns: [
+    {
+      form: "Have you ever + V3? — Yes, I have. / No, I haven't.",
+      vi: 'Hỏi về trải nghiệm',
+      note: 'Hiện tại hoàn thành (have + V3) nói về trải nghiệm trong đời, không nói rõ lúc nào. V3 của go là "been": Have you ever been to Japan?',
+      ex: [
+        'Have you ever been to Japan? | Bạn đã từng đến Nhật chưa?',
+        'Yes, I have. I went there two years ago. | Rồi. Tôi đến đó hai năm trước.',
+        "I've never tried snails. | Tôi chưa bao giờ ăn ốc.",
+      ],
+    },
+    {
+      form: 'Where can I …? / Is there … near here?',
+      vi: 'Tìm dịch vụ khi đi du lịch',
+      note: 'Mẫu đa năng: Where can I buy a SIM card / exchange money / get a taxi?',
+      ex: [
+        'Where can I buy a SIM card? | Tôi có thể mua SIM ở đâu?',
+        'Where can I get a taxi? | Tôi có thể bắt taxi ở đâu?',
+        'Is there a good restaurant near here? | Gần đây có nhà hàng nào ngon không?',
+      ],
+    },
+    {
+      form: 'Excuse me, could you …?',
+      vi: 'Nhờ người lạ giúp',
+      note: 'Mở đầu bằng "Excuse me", kết thúc bằng "Thank you so much!". Có thể chúc thêm: "Have a nice trip!"',
+      ex: [
+        'Excuse me, could you take a photo of us? | Xin lỗi, bạn chụp giúp chúng tôi một tấm ảnh được không?',
+        'Could you recommend a good place to visit? | Bạn có thể gợi ý một nơi đáng đến không?',
+        'Thank you so much! Have a nice trip! | Cảm ơn bạn nhiều! Chúc chuyến đi vui vẻ!',
+      ],
+    },
+    {
+      form: "I'm here on holiday / on business.",
+      vi: 'Trả lời ở cửa khẩu',
+      note: 'Nhân viên hay hỏi mục đích chuyến đi và ở bao lâu. Trả lời ngắn và rõ.',
+      ex: [
+        "What's the purpose of your visit? | Mục đích chuyến đi của bạn là gì?",
+        "I'm here on holiday for one week. | Tôi đi du lịch một tuần.",
+        "I'm staying at the Sunrise Hotel. | Tôi ở khách sạn Sunrise.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'At immigration',
+      vi: 'Ở quầy xuất nhập cảnh',
+      a: 'Officer',
+      b: 'Quan',
+      lines: [
+        'A: Good morning. Passport, please. | Chào buổi sáng. Cho xem hộ chiếu.',
+        'B: Here you are. | Đây ạ.',
+        "A: What's the purpose of your visit? | Mục đích chuyến đi của anh là gì?",
+        "B: I'm here on holiday with my family. | Tôi đi du lịch cùng gia đình.",
+        'A: How long are you staying? | Anh ở lại bao lâu?',
+        "B: Ten days. We're staying at a hotel in Sydney. | Mười ngày. Chúng tôi ở một khách sạn ở Sydney.",
+        'A: OK. Enjoy your stay. | Được. Chúc anh có kỳ nghỉ vui vẻ.',
+      ],
+    },
+    {
+      title: 'Travel stories',
+      vi: 'Chuyện du lịch',
+      a: 'Emily',
+      b: 'Tuan',
+      lines: [
+        'A: Have you ever been abroad, Tuan? | Tuấn đã từng ra nước ngoài chưa?',
+        'B: Yes, I have. I went to Thailand last year. | Rồi. Năm ngoái mình đi Thái Lan.',
+        'A: How was it? | Thế nào?',
+        'B: It was a great experience. The food was amazing, and the people were friendly. | Một trải nghiệm tuyệt vời. Đồ ăn ngon tuyệt, người dân thân thiện.',
+        'A: Did you buy any souvenirs? | Bạn có mua quà lưu niệm không?',
+        'B: Yes, lots! My luggage was too heavy on the way home. | Có, nhiều lắm! Lúc về hành lý của mình nặng quá.',
+        'A: Ha ha, that always happens! | Haha, lúc nào cũng vậy!',
+      ],
+    },
+  ],
+  tip: 'Chuẩn bị sẵn vài câu "cứu cánh": "Sorry, I don\'t understand." — "Could you write it down, please?" — "How do you say this in English?"',
+});

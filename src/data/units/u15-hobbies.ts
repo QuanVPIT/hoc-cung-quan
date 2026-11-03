@@ -1,0 +1,103 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 15,
+  stage: 3,
+  level: 'A2',
+  emoji: '🎸',
+  title: 'Hobbies',
+  vi: 'Sở thích',
+  goal: 'Kể về sở thích, điều mình thích và không thích, khả năng của mình.',
+  words: [
+    'hobby | sở thích | ˈhɑːbi | 🧩 | Reading is my favorite hobby. | Đọc sách là sở thích yêu thích của tôi.',
+    'free time | thời gian rảnh | friː taɪm | 🕊️ | What do you do in your free time? | Lúc rảnh bạn làm gì?',
+    'reading | đọc sách | ˈriːdɪŋ | 📚 | I enjoy reading before bed. | Tôi thích đọc sách trước khi ngủ.',
+    'music | âm nhạc | ˈmjuːzɪk | 🎵 | I listen to music every day. | Tôi nghe nhạc mỗi ngày.',
+    'sing | hát | sɪŋ | 🎤 | She loves to sing karaoke. | Cô ấy thích hát karaoke.',
+    'guitar | đàn ghi-ta | ɡɪˈtɑːr | 🎸 | He can play the guitar. | Anh ấy biết chơi ghi-ta.',
+    'swimming | bơi lội | ˈswɪmɪŋ | 🏊 | I go swimming on Sundays. | Tôi đi bơi vào Chủ nhật.',
+    'football | bóng đá | ˈfʊtbɔːl | ⚽ | Do you like watching football? | Bạn có thích xem bóng đá không?',
+    'photography | nhiếp ảnh | fəˈtɑːɡrəfi | 📷 | Photography is a fun hobby. | Nhiếp ảnh là một thú vui.',
+    'game | trò chơi | ɡeɪm | 🎮 | My son plays video games too much. | Con trai tôi chơi điện tử quá nhiều.',
+    'garden | vườn; làm vườn | ˈɡɑːrdn | 🪴 | My mother loves working in the garden. | Mẹ tôi thích làm vườn.',
+    "draw | vẽ | drɔː | ✏️ | I can't draw very well. | Tôi vẽ không giỏi lắm.",
+    'hiking | đi bộ đường dài, leo núi | ˈhaɪkɪŋ | 🥾 | We go hiking in the mountains. | Chúng tôi đi leo núi.',
+    'interested | quan tâm, hứng thú | ˈɪntrəstɪd | 🧐 | Are you interested in art? | Bạn có hứng thú với nghệ thuật không?',
+    'boring | chán | ˈbɔːrɪŋ | 😴 | This movie is boring. | Bộ phim này chán quá.',
+  ],
+  patterns: [
+    {
+      form: 'What do you do in your free time?',
+      vi: 'Hỏi sở thích',
+      note: 'Câu hỏi tự nhiên hơn "What\'s your hobby?". Trả lời: "I usually…" / "I like…"',
+      ex: [
+        'What do you like doing on weekends? | Cuối tuần bạn thích làm gì?',
+        'I usually go jogging in the park. | Tôi thường chạy bộ trong công viên.',
+        'I spend a lot of time with my kids. | Tôi dành nhiều thời gian cho các con.',
+      ],
+    },
+    {
+      form: 'I like / love / enjoy + V-ing.',
+      vi: 'Nói điều mình thích',
+      note: "Sau like/love/enjoy/hate dùng V-ing: I enjoy cooking. Mức độ: love > like > don't mind > don't like > hate.",
+      ex: [
+        'I love playing football. | Tôi rất thích chơi bóng đá.',
+        'She enjoys taking photos. | Cô ấy thích chụp ảnh.',
+        "I don't like watching horror movies. | Tôi không thích xem phim kinh dị.",
+      ],
+    },
+    {
+      form: "I'm interested in … / I'm good at …",
+      vi: 'Quan tâm đến / giỏi về',
+      note: 'Sau giới từ (in, at) dùng danh từ hoặc V-ing: interested in music, good at cooking.',
+      ex: [
+        "I'm interested in history. | Tôi quan tâm đến lịch sử.",
+        "He's good at drawing. | Anh ấy vẽ giỏi.",
+        "I'm not very good at singing. | Tôi hát không giỏi lắm.",
+      ],
+    },
+    {
+      form: "Can you + động từ? — Yes, I can. / No, I can't.",
+      vi: 'Hỏi khả năng',
+      note: 'can + động từ nguyên mẫu, không thêm -s: She can swim (không phải "She cans swims").',
+      ex: [
+        'Can you play the piano? | Bạn biết chơi piano không?',
+        'Yes, I can, but not very well. | Có, nhưng không giỏi lắm.',
+        "No, I can't swim. | Không, tôi không biết bơi.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Free time',
+      vi: 'Thời gian rảnh',
+      a: 'Kate',
+      b: 'Quan',
+      lines: [
+        'A: What do you do in your free time, Quan? | Lúc rảnh anh làm gì, Quân?',
+        'B: I love photography. I often take photos of street life. | Tôi rất thích nhiếp ảnh. Tôi hay chụp ảnh đời sống đường phố.',
+        "A: That's cool! Are you good at it? | Hay quá! Anh có giỏi không?",
+        'B: Not really, but I enjoy it. What about you? | Không hẳn, nhưng tôi thích. Còn chị?',
+        "A: I'm interested in music. I play the guitar in a small band. | Tôi thích âm nhạc. Tôi chơi ghi-ta trong một ban nhạc nhỏ.",
+        'B: Wow! Can you sing too? | Chà! Chị có hát được không?',
+        'A: Yes, I can, but only in the shower! | Có, nhưng chỉ hát trong phòng tắm thôi!',
+      ],
+    },
+    {
+      title: 'Weekend activities',
+      vi: 'Hoạt động cuối tuần',
+      a: 'Nam',
+      b: 'Sophie',
+      lines: [
+        'A: What do you like doing on weekends, Sophie? | Cuối tuần Sophie thích làm gì?',
+        'B: I usually go hiking with my friends. | Mình thường đi leo núi với bạn bè.',
+        "A: Isn't it tiring? | Không mệt à?",
+        'B: A little, but the views are amazing. Do you like hiking? | Hơi mệt, nhưng cảnh đẹp lắm. Bạn có thích leo núi không?',
+        'A: Not really. I prefer staying home and reading. | Không lắm. Mình thích ở nhà đọc sách hơn.',
+        'B: Reading is nice too. What are you reading now? | Đọc sách cũng hay. Giờ bạn đang đọc gì?',
+        "A: A book about Vietnamese history. It's really interesting. | Một cuốn sách về lịch sử Việt Nam. Rất thú vị.",
+      ],
+    },
+  ],
+  tip: 'Khi người khác kể sở thích, hỏi thêm một câu để câu chuyện tiếp tục: "How did you start?" hoặc "How often do you do that?"',
+});

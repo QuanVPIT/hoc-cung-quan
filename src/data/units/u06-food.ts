@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 6,
+  stage: 2,
+  level: 'A1+',
+  emoji: '🍜',
+  title: 'Food & Drinks',
+  vi: 'Ăn uống & gọi món',
+  goal: 'Gọi món ở nhà hàng, yêu cầu riêng (ít cay, không đá) và thanh toán.',
+  words: [
+    'menu | thực đơn | ˈmenjuː | 📜 | Can I see the menu, please? | Cho tôi xem thực đơn được không?',
+    'order | gọi món | ˈɔːrdər | 📝 | Are you ready to order? | Anh chị gọi món chưa ạ?',
+    "rice | cơm, gạo | raɪs | 🍚 | I'd like fried rice with chicken. | Tôi muốn cơm chiên gà.",
+    'noodles | mì, phở, bún | ˈnuːdlz | 🍜 | Pho is a kind of rice noodles. | Phở là một loại sợi làm từ gạo.',
+    'chicken | thịt gà | ˈtʃɪkɪn | 🍗 | The chicken soup is very good. | Súp gà rất ngon.',
+    "beef | thịt bò | biːf | 🥩 | I don't eat beef. | Tôi không ăn thịt bò.",
+    'vegetables | rau củ | ˈvedʒtəblz | 🥦 | Please add more vegetables. | Làm ơn cho thêm rau.',
+    'water | nước | ˈwɔːtər | 💧 | Can I have a glass of water? | Cho tôi một cốc nước được không?',
+    'coffee | cà phê | ˈkɔːfi | ☕ | One iced coffee with milk, please. | Cho một cà phê sữa đá.',
+    'delicious | ngon | dɪˈlɪʃəs | 😋 | This soup is delicious! | Món súp này ngon quá!',
+    'spicy | cay | ˈspaɪsi | 🌶️ | Is this dish spicy? | Món này có cay không?',
+    "hungry | đói | ˈhʌŋɡri | 🤤 | I'm so hungry! | Tôi đói quá!",
+    'bill | hóa đơn | bɪl | 🧾 | Can we have the bill, please? | Cho chúng tôi xin hóa đơn.',
+    'waiter | người phục vụ | ˈweɪtər | 🍷 | The waiter is very polite. | Người phục vụ rất lịch sự.',
+    'dessert | món tráng miệng | dɪˈzɜːrt | 🍰 | Do you want dessert? | Bạn có muốn món tráng miệng không?',
+  ],
+  patterns: [
+    {
+      form: "I'd like … / Can I have …, please?",
+      vi: 'Gọi món lịch sự',
+      note: 'I\'d like = I would like (tôi muốn) — lịch sự hơn "I want". Thêm "please" cuối câu càng lịch sự.',
+      ex: [
+        "I'd like a bowl of pho, please. | Cho tôi một bát phở.",
+        'Can I have a cup of tea? | Cho tôi một tách trà được không?',
+        "I'd like the chicken salad. | Tôi muốn món salad gà.",
+      ],
+    },
+    {
+      form: 'Would you like …? — Yes, please. / No, thank you.',
+      vi: 'Mời và hỏi ý muốn',
+      note: 'Người phục vụ hay hỏi "Would you like…?". Trả lời gọn: "Yes, please." hoặc "No, thank you."',
+      ex: [
+        'Would you like something to drink? | Anh chị có muốn uống gì không?',
+        'Yes, please. An orange juice. | Vâng, cho một ly nước cam.',
+        "No, thank you. I'm full. | Không, cảm ơn. Tôi no rồi.",
+      ],
+    },
+    {
+      form: 'with / without / no / less + …',
+      vi: 'Yêu cầu riêng',
+      note: 'no ice = không đá, without sugar = không đường, less spicy = ít cay, extra = thêm.',
+      ex: [
+        'A coffee without sugar, please. | Một cà phê không đường.',
+        'Can I have it with no ice? | Cho tôi không đá được không?',
+        'Please make it less spicy. | Làm ơn làm ít cay thôi.',
+      ],
+    },
+    {
+      form: "How much is …? — It's …",
+      vi: 'Hỏi giá',
+      note: "Số ít: How much is it? Số nhiều: How much are they? Trả lời: It's 50,000 dong.",
+      ex: [
+        'How much is the beef noodle soup? | Phở bò bao nhiêu tiền?',
+        "It's sixty thousand dong. | Sáu mươi nghìn đồng.",
+        'How much are these cakes? | Mấy cái bánh này bao nhiêu tiền?',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'At a restaurant',
+      vi: 'Ở nhà hàng',
+      a: 'Waiter',
+      b: 'Quan',
+      lines: [
+        'A: Good evening. Are you ready to order? | Chào buổi tối. Anh gọi món chưa ạ?',
+        "B: Yes. I'd like the beef noodle soup, please. | Rồi. Cho tôi phở bò.",
+        'A: Would you like something to drink? | Anh có muốn uống gì không?',
+        'B: Can I have an iced tea? | Cho tôi một trà đá được không?',
+        'A: Sure. Anything else? | Vâng. Còn gì nữa không ạ?',
+        "B: No, thank you. That's all. | Không, cảm ơn. Vậy thôi.",
+        'A: OK. Your food will be ready in ten minutes. | Vâng. Món của anh sẽ có trong mười phút.',
+      ],
+    },
+    {
+      title: 'The bill',
+      vi: 'Thanh toán',
+      a: 'Emma',
+      b: 'Waiter',
+      lines: [
+        'A: Excuse me, can we have the bill, please? | Xin lỗi, cho chúng tôi xin hóa đơn.',
+        'B: Of course. Did you enjoy your meal? | Tất nhiên ạ. Chị dùng bữa có ngon không?',
+        'A: Yes, it was delicious! The fish was amazing. | Có, ngon lắm! Món cá tuyệt vời.',
+        "B: Thank you. That's three hundred thousand dong. | Cảm ơn chị. Tổng cộng ba trăm nghìn đồng.",
+        'A: Can I pay by card? | Tôi trả bằng thẻ được không?',
+        'B: Yes, of course. | Vâng, được ạ.',
+      ],
+    },
+  ],
+  tip: 'Ở nhà hàng, gọi phục vụ bằng "Excuse me" — không vẫy tay hay gọi "Hey!". Ở Mỹ thường để lại tiền tip 15–20%.',
+});

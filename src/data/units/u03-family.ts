@@ -1,0 +1,101 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 3,
+  stage: 1,
+  level: 'A1',
+  emoji: '👨‍👩‍👧',
+  title: 'Family',
+  vi: 'Gia đình',
+  goal: 'Giới thiệu các thành viên trong gia đình và hỏi về gia đình người khác.',
+  words: [
+    'family | gia đình | ˈfæməli | 👨‍👩‍👧 | I have a big family. | Tôi có một gia đình lớn.',
+    'parents | bố mẹ | ˈperənts | 👫 | My parents live in the countryside. | Bố mẹ tôi sống ở quê.',
+    'father | bố | ˈfɑːðər | 👨 | My father is a teacher. | Bố tôi là giáo viên.',
+    'mother | mẹ | ˈmʌðər | 👩 | My mother cooks very well. | Mẹ tôi nấu ăn rất ngon.',
+    'brother | anh/em trai | ˈbrʌðər | 👦 | I have one older brother. | Tôi có một anh trai.',
+    'sister | chị/em gái | ˈsɪstər | 👧 | My younger sister is a student. | Em gái tôi là sinh viên.',
+    'husband | chồng | ˈhʌzbənd | 🤵 | Her husband works in a bank. | Chồng cô ấy làm ở ngân hàng.',
+    'wife | vợ | waɪf | 👰 | This is my wife, Hoa. | Đây là vợ tôi, Hoa.',
+    'son | con trai | sʌn | 👶 | Our son is three years old. | Con trai chúng tôi ba tuổi.',
+    'daughter | con gái | ˈdɔːtər | 🎀 | They have two daughters. | Họ có hai cô con gái.',
+    'children | con cái, trẻ em | ˈtʃɪldrən | 🧒 | Do you have any children? | Bạn có con chưa?',
+    'grandparents | ông bà | ˈɡrænperənts | 👴 | I visit my grandparents every Tet. | Tôi thăm ông bà mỗi dịp Tết.',
+    'married | đã kết hôn | ˈmærid | 💍 | Are you married? | Bạn đã lập gia đình chưa?',
+    "single | độc thân | ˈsɪŋɡl | 🙆 | No, I'm single. | Chưa, tôi còn độc thân.",
+    'older | lớn tuổi hơn | ˈoʊldər | ⏫ | My sister is two years older than me. | Chị tôi lớn hơn tôi hai tuổi.',
+  ],
+  patterns: [
+    {
+      form: 'I have + số + người.',
+      vi: 'Kể về thành viên gia đình',
+      note: 'Số nhiều thêm -s: one brother → two brothers. Đặc biệt: child → children.',
+      ex: [
+        'I have two brothers and one sister. | Tôi có hai anh em trai và một chị gái.',
+        'I have one son. | Tôi có một con trai.',
+        'We have three children. | Chúng tôi có ba con.',
+      ],
+    },
+    {
+      form: "Do you have any …? — Yes, I do. / No, I don't.",
+      vi: 'Hỏi có … không',
+      note: 'Câu hỏi với động từ thường dùng "Do". Trả lời ngắn: "Yes, I do." / "No, I don\'t."',
+      ex: [
+        'Do you have any brothers or sisters? | Bạn có anh chị em không?',
+        'Yes, I do. I have a younger sister. | Có. Tôi có một em gái.',
+        "No, I don't. I'm an only child. | Không. Tôi là con một.",
+      ],
+    },
+    {
+      form: 'older / younger + brother / sister',
+      vi: 'Anh/chị hay em',
+      note: 'Tiếng Anh không có từ riêng cho anh/em. Thêm older (lớn hơn) hoặc younger (nhỏ hơn) khi cần nói rõ.',
+      ex: [
+        'This is my older sister. | Đây là chị gái tôi.',
+        'My younger brother is twenty. | Em trai tôi hai mươi tuổi.',
+        'Is he your older or younger brother? | Anh ấy là anh hay em trai bạn?',
+      ],
+    },
+    {
+      form: 'my / your / his / her / our / their',
+      vi: 'Của tôi, của bạn, của anh ấy…',
+      note: 'Đứng trước danh từ: my wife (vợ tôi), his son (con trai anh ấy), their house (nhà của họ).',
+      ex: [
+        'His wife is a doctor. | Vợ anh ấy là bác sĩ.',
+        'Her parents live in Hue. | Bố mẹ cô ấy sống ở Huế.',
+        'Our house is small but cozy. | Nhà chúng tôi nhỏ nhưng ấm cúng.',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Family photo',
+      vi: 'Ảnh gia đình',
+      a: 'Emma',
+      b: 'Quan',
+      lines: [
+        'A: Is this your family photo? | Đây là ảnh gia đình anh à?',
+        'B: Yes, it is. This is my wife, and these are our children. | Đúng vậy. Đây là vợ tôi, và đây là các con chúng tôi.',
+        "A: They're so cute! How old are they? | Chúng dễ thương quá! Chúng bao nhiêu tuổi?",
+        'B: Our son is seven, and our daughter is three. | Con trai tôi bảy tuổi, con gái ba tuổi.',
+        'A: Who is this man? | Người đàn ông này là ai?',
+        "B: That's my father. He lives with us. | Đó là bố tôi. Ông sống cùng chúng tôi.",
+      ],
+    },
+    {
+      title: 'Brothers and sisters',
+      vi: 'Anh chị em',
+      a: 'Mike',
+      b: 'Lan',
+      lines: [
+        'A: Do you have any brothers or sisters, Lan? | Lan có anh chị em không?',
+        'B: Yes, I have an older brother and a younger sister. | Có, mình có một anh trai và một em gái.',
+        'A: Are they married? | Họ lập gia đình chưa?',
+        'B: My brother is married. My sister is still single. | Anh mình lập gia đình rồi. Em gái vẫn độc thân.',
+        "A: I'm an only child, so I always wanted a sister! | Mình là con một, nên mình luôn ước có chị em gái!",
+        'B: Ha ha, sisters can be noisy too! | Haha, chị em gái cũng ồn ào lắm đó!',
+      ],
+    },
+  ],
+  tip: 'Hỏi "Are you married?" với người mới quen có thể hơi riêng tư ở phương Tây. An toàn hơn: đợi họ tự kể, hoặc hỏi "Do you have any children?" khi đã thân hơn.',
+});

@@ -1,0 +1,98 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 4,
+  stage: 1,
+  level: 'A1',
+  emoji: '💼',
+  title: 'Jobs',
+  vi: 'Nghề nghiệp',
+  goal: 'Nói mình làm nghề gì, làm ở đâu và cảm nhận về công việc.',
+  words: [
+    "job | công việc, nghề | dʒɑːb | 💼 | What's your job? | Bạn làm nghề gì?",
+    'work | làm việc | wɜːrk | 🛠️ | I work in an office. | Tôi làm việc ở văn phòng.',
+    'office | văn phòng | ˈɑːfɪs | 🖥️ | Our office is on the fifth floor. | Văn phòng chúng tôi ở tầng năm.',
+    'company | công ty | ˈkʌmpəni | 🏭 | She works for a big company. | Cô ấy làm cho một công ty lớn.',
+    'teacher | giáo viên | ˈtiːtʃər | 👩‍🏫 | My wife is an English teacher. | Vợ tôi là giáo viên tiếng Anh.',
+    'engineer | kỹ sư | ˌendʒɪˈnɪr | 👷 | He is a software engineer. | Anh ấy là kỹ sư phần mềm.',
+    'doctor | bác sĩ | ˈdɑːktər | 🩺 | The doctor is very kind. | Bác sĩ rất tử tế.',
+    'nurse | y tá | nɜːrs | 👩‍⚕️ | My sister is a nurse at a hospital. | Em gái tôi là y tá ở bệnh viện.',
+    'driver | tài xế | ˈdraɪvər | 🚗 | The taxi driver is friendly. | Bác tài taxi rất thân thiện.',
+    'manager | quản lý | ˈmænɪdʒər | 📋 | I want to talk to the manager. | Tôi muốn nói chuyện với quản lý.',
+    'boss | sếp | bɔːs | 🧑‍💼 | My boss is on holiday this week. | Sếp tôi đi nghỉ tuần này.',
+    'colleague | đồng nghiệp | ˈkɑːliːɡ | 👥 | I have lunch with my colleagues. | Tôi ăn trưa với đồng nghiệp.',
+    "busy | bận | ˈbɪzi | 😵 | I'm very busy today. | Hôm nay tôi rất bận.",
+    'salary | lương | ˈsæləri | 💰 | The salary is good. | Lương khá tốt.',
+    'business | việc kinh doanh | ˈbɪznəs | 📈 | I run a small business. | Tôi kinh doanh nhỏ.',
+  ],
+  patterns: [
+    {
+      form: "What do you do? — I'm a/an …",
+      vi: 'Hỏi nghề nghiệp',
+      note: '"What do you do?" tự nhiên hơn "What\'s your job?". Nhớ a/an trước nghề: a teacher, an engineer (an đứng trước nguyên âm).',
+      ex: ['What do you do? | Bạn làm nghề gì?', "I'm an engineer. | Tôi là kỹ sư.", "She's a nurse. | Cô ấy là y tá."],
+    },
+    {
+      form: 'I work for / at / in …',
+      vi: 'Nơi làm việc',
+      note: 'work for + công ty (work for Samsung). work at + địa điểm (at a hospital). work in + lĩnh vực hoặc nơi chung (in sales, in an office).',
+      ex: [
+        'I work for a Japanese company. | Tôi làm cho một công ty Nhật.',
+        'He works at a hospital. | Anh ấy làm ở bệnh viện.',
+        'I work in sales. | Tôi làm mảng bán hàng.',
+      ],
+    },
+    {
+      form: 'He / She + động từ thêm -s',
+      vi: 'Ngôi thứ ba số ít',
+      note: 'Với he/she/it, động từ thêm -s/-es: I work → he works, I teach → she teaches. Đặc biệt: I have → he has.',
+      ex: [
+        'My father works in a factory. | Bố tôi làm ở nhà máy.',
+        'She teaches math. | Cô ấy dạy toán.',
+        'He has a lot of meetings. | Anh ấy có nhiều cuộc họp.',
+      ],
+    },
+    {
+      form: 'Do you like your job? — Yes, because …',
+      vi: 'Hỏi cảm nhận về công việc',
+      note: 'Trả lời kèm lý do với "because" giúp câu chuyện tiếp tục.',
+      ex: [
+        'Do you like your job? | Bạn có thích công việc của mình không?',
+        'Yes, I love it because I can help people. | Có, tôi rất thích vì tôi giúp được mọi người.',
+        "It's OK, but it's very busy. | Cũng được, nhưng rất bận.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'What do you do?',
+      vi: 'Bạn làm nghề gì?',
+      a: 'Sarah',
+      b: 'Quan',
+      lines: [
+        'A: So, what do you do, Quan? | Vậy anh làm nghề gì, Quân?',
+        "B: I'm a software engineer. I work for a tech company. | Tôi là kỹ sư phần mềm. Tôi làm cho một công ty công nghệ.",
+        'A: That sounds interesting! Do you like it? | Nghe thú vị quá! Anh có thích không?',
+        'B: Yes, I do. My colleagues are great. What about you? | Có. Đồng nghiệp tôi rất tuyệt. Còn chị?',
+        "A: I'm a nurse. I work at a big hospital. | Tôi là y tá. Tôi làm ở một bệnh viện lớn.",
+        "B: Wow, that's an important job. Are you busy? | Ồ, công việc quan trọng đấy. Chị có bận không?",
+        'A: Very busy! But I love helping people. | Rất bận! Nhưng tôi thích giúp đỡ mọi người.',
+      ],
+    },
+    {
+      title: 'A new colleague',
+      vi: 'Đồng nghiệp mới',
+      a: 'Mr. Lee',
+      b: 'Hoa',
+      lines: [
+        "A: Hi, you must be Hoa. I'm David Lee, the manager. | Chào, chắc cô là Hoa. Tôi là David Lee, quản lý.",
+        'B: Nice to meet you, Mr. Lee. | Rất vui được gặp ông, ông Lee.',
+        'A: Welcome to the team! This is your desk. | Chào mừng đến với nhóm! Đây là bàn làm việc của cô.',
+        'B: Thank you. What time do we start work? | Cảm ơn ông. Chúng ta bắt đầu làm lúc mấy giờ?',
+        'A: We start at eight thirty and finish at five thirty. | Chúng ta bắt đầu lúc tám rưỡi và kết thúc lúc năm rưỡi.',
+        "B: Great. I'm happy to be here. | Tuyệt. Tôi rất vui được ở đây.",
+      ],
+    },
+  ],
+  tip: 'Hỏi lương ("How much is your salary?") là chủ đề nhạy cảm với người phương Tây — tránh hỏi khi mới quen.',
+});

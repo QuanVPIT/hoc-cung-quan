@@ -1,0 +1,103 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 2,
+  stage: 1,
+  level: 'A1',
+  emoji: '🕐',
+  title: 'Numbers & Time',
+  vi: 'Con số, giờ & ngày',
+  goal: 'Nói tuổi, số điện thoại, hỏi giờ và hẹn ngày giờ đơn giản.',
+  words: [
+    'number | con số | ˈnʌmbər | 🔢 | What is your phone number? | Số điện thoại của bạn là gì?',
+    'phone | điện thoại | foʊn | 📱 | My phone is on the table. | Điện thoại của tôi ở trên bàn.',
+    'old | tuổi, già | oʊld | 🎂 | How old are you? | Bạn bao nhiêu tuổi?',
+    'twenty | hai mươi | ˈtwenti | 2️⃣ | I am twenty years old. | Tôi hai mươi tuổi.',
+    'hundred | trăm | ˈhʌndrəd | 💯 | It costs one hundred dollars. | Nó giá một trăm đô la.',
+    "o'clock | giờ đúng | əˈklɑːk | 🕖 | The class starts at seven o'clock. | Lớp học bắt đầu lúc bảy giờ.",
+    "half | một nửa, rưỡi | hæf | 🌓 | It's half past six. | Bây giờ là sáu giờ rưỡi.",
+    'minute | phút | ˈmɪnɪt | ⏱️ | Wait a minute, please. | Làm ơn đợi một phút.',
+    'hour | giờ, tiếng đồng hồ | ˈaʊər | ⌛ | The meeting is one hour long. | Cuộc họp kéo dài một tiếng.',
+    'today | hôm nay | təˈdeɪ | 📅 | Today is Monday. | Hôm nay là thứ Hai.',
+    'tomorrow | ngày mai | təˈmɑːroʊ | ⏭️ | See you tomorrow morning. | Hẹn gặp bạn sáng mai.',
+    'week | tuần | wiːk | 7️⃣ | I work five days a week. | Tôi làm việc năm ngày một tuần.',
+    'weekend | cuối tuần | ˈwiːkend | 🛋️ | What do you do on the weekend? | Bạn làm gì vào cuối tuần?',
+    'month | tháng | mʌnθ | 📆 | My birthday is next month. | Sinh nhật tôi vào tháng sau.',
+    'birthday | sinh nhật | ˈbɜːrθdeɪ | 🎈 | Happy birthday to you! | Chúc mừng sinh nhật bạn!',
+  ],
+  patterns: [
+    {
+      form: "What time is it? — It's …",
+      vi: 'Hỏi giờ',
+      note: 'Giờ đúng: "seven o\'clock". Giờ hơn: "ten past seven" (7:10). Giờ kém: "ten to eight" (7:50). Cách dễ nhất: đọc thẳng số — "seven fifty".',
+      ex: [
+        'What time is it? | Mấy giờ rồi?',
+        "It's seven o'clock. | Bảy giờ đúng.",
+        "It's half past nine. | Chín giờ rưỡi.",
+        "It's eight fifteen. | Tám giờ mười lăm.",
+      ],
+    },
+    {
+      form: "How old are you? — I'm … (years old).",
+      vi: 'Hỏi tuổi',
+      note: 'Có thể bỏ "years old": "I\'m 30." Với người lớn phương Tây, hỏi tuổi hơi riêng tư.',
+      ex: [
+        'How old are you? | Bạn bao nhiêu tuổi?',
+        "I'm thirty-two years old. | Tôi ba mươi hai tuổi.",
+        'My son is five. | Con trai tôi năm tuổi.',
+      ],
+    },
+    {
+      form: "What's your phone number? — It's …",
+      vi: 'Hỏi số điện thoại',
+      note: 'Đọc từng chữ số. Số 0 đọc là "oh" hoặc "zero". Hai số giống nhau liền nhau nói "double": 77 = "double seven".',
+      ex: [
+        "What's your phone number? | Số điện thoại của bạn là gì?",
+        "It's zero nine one two, three four five, six seven eight. | Là 0912 345 678.",
+        'Can you say that again, please? | Bạn nói lại được không?',
+      ],
+    },
+    {
+      form: 'at + giờ / on + thứ / in + tháng',
+      vi: 'Giới từ chỉ thời gian',
+      note: "at + giờ (at 7 o'clock), on + thứ/ngày (on Monday), in + tháng/năm (in May). Mẹo: AT nhỏ nhất → ON → IN lớn nhất.",
+      ex: [
+        "The meeting is at ten o'clock. | Cuộc họp lúc mười giờ.",
+        "I'm free on Sunday. | Tôi rảnh vào Chủ nhật.",
+        'My birthday is in May. | Sinh nhật tôi vào tháng Năm.',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Exchanging numbers',
+      vi: 'Xin số điện thoại',
+      a: 'Anna',
+      b: 'Quan',
+      lines: [
+        'A: It was nice talking to you, Quan. | Nói chuyện với anh vui quá, Quân.',
+        "B: You too! What's your phone number? | Tôi cũng vậy! Số điện thoại của chị là gì?",
+        "A: It's zero nine eight, seven six five, four three two one. | Là 098 765 4321.",
+        'B: Sorry, can you say that again, please? | Xin lỗi, chị nói lại được không?',
+        'A: Sure. Zero nine eight, seven six five, four three two one. | Được. 098 765 4321.',
+        "B: Thanks. I'll call you tomorrow. | Cảm ơn. Mai tôi sẽ gọi chị.",
+      ],
+    },
+    {
+      title: 'What time is it?',
+      vi: 'Mấy giờ rồi?',
+      a: 'Ben',
+      b: 'Linh',
+      lines: [
+        'A: Excuse me, what time is it? | Xin lỗi, mấy giờ rồi ạ?',
+        "B: It's half past eight. | Tám giờ rưỡi.",
+        "A: Oh no! My class starts at nine o'clock. | Ôi không! Lớp tôi bắt đầu lúc chín giờ.",
+        "B: Don't worry. You have thirty minutes. | Đừng lo. Bạn còn ba mươi phút.",
+        'A: Is the school far from here? | Trường có xa đây không?',
+        "B: No, it's only ten minutes by bus. | Không, đi xe buýt chỉ mười phút.",
+        'A: Great. Thank you! | Tuyệt. Cảm ơn bạn!',
+      ],
+    },
+  ],
+  tip: 'Số -teen (thirteen, fifteen) nhấn âm cuối: thir-TEEN. Số -ty (thirty, fifty) nhấn âm đầu: THIR-ty. Nghe kỹ để không nhầm 13 với 30!',
+});

@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 11,
+  stage: 3,
+  level: 'A2',
+  emoji: '📅',
+  title: 'Making Plans',
+  vi: 'Rủ rê & hẹn gặp',
+  goal: 'Rủ ai đó đi chơi, nhận lời hoặc từ chối lịch sự, chốt giờ và địa điểm.',
+  words: [
+    'free | rảnh | friː | 🆓 | Are you free this Saturday? | Thứ Bảy này bạn rảnh không?',
+    'plan | kế hoạch | plæn | 🧭 | Do you have any plans tonight? | Tối nay bạn có kế hoạch gì không?',
+    'invite | mời | ɪnˈvaɪt | 💌 | I want to invite you to my party. | Tôi muốn mời bạn đến bữa tiệc của tôi.',
+    'party | bữa tiệc | ˈpɑːrti | 🥳 | The party starts at seven. | Bữa tiệc bắt đầu lúc bảy giờ.',
+    "movie | bộ phim | ˈmuːvi | 🎬 | Let's watch a movie tonight. | Tối nay đi xem phim nhé.",
+    "meet up | gặp gỡ, tụ tập | miːt ʌp | 🍻 | Let's meet up after work. | Gặp nhau sau giờ làm nhé.",
+    "idea | ý tưởng | aɪˈdiːə | 💡 | That's a great idea! | Ý hay đấy!",
+    "sure | chắc chắn, được thôi | ʃʊr | 👌 | Sure, I'd love to come. | Được chứ, tôi rất muốn đến.",
+    'maybe | có lẽ | ˈmeɪbi | 🤔 | Maybe next time. | Có lẽ để lần sau.',
+    "sorry | xin lỗi, tiếc | ˈsɑːri | 😔 | Sorry, I can't make it. | Xin lỗi, tôi không đến được.",
+    'tonight | tối nay | təˈnaɪt | 🌙 | What are you doing tonight? | Tối nay bạn làm gì?',
+    "together | cùng nhau | təˈɡeðər | 👭 | Let's have lunch together. | Cùng ăn trưa nhé.",
+    'change | thay đổi | tʃeɪndʒ | 🔄 | Can we change the time? | Mình đổi giờ được không?',
+    'cancel | hủy | ˈkænsl | ❌ | I need to cancel our meeting. | Tôi cần hủy cuộc hẹn của chúng ta.',
+    'time | thời gian; lúc | taɪm | 🕰️ | What time is good for you? | Mấy giờ thì tiện cho bạn?',
+  ],
+  patterns: [
+    {
+      form: 'Are you free on / at …?',
+      vi: 'Hỏi có rảnh không',
+      note: 'Hỏi trước khi mời để người kia dễ từ chối. "Are you busy…?" cũng dùng được.',
+      ex: [
+        'Are you free on Friday evening? | Tối thứ Sáu bạn rảnh không?',
+        'Are you busy this weekend? | Cuối tuần này bạn có bận không?',
+        'What are you doing on Sunday? | Chủ nhật bạn làm gì?',
+      ],
+    },
+    {
+      form: "Let's … / How about …? / Would you like to …?",
+      vi: 'Rủ rê, gợi ý',
+      note: "Let's + động từ (Let's go). How about + V-ing (How about going…?). Would you like to + động từ — lịch sự nhất.",
+      ex: [
+        "Let's go to the cinema. | Đi xem phim đi.",
+        'How about having dinner together? | Cùng ăn tối nhé?',
+        'Would you like to come to my party? | Bạn có muốn đến bữa tiệc của tôi không?',
+      ],
+    },
+    {
+      form: "Sure, I'd love to. / Sorry, I can't. I have to …",
+      vi: 'Nhận lời / từ chối',
+      note: 'Từ chối lịch sự = xin lỗi + lý do + gợi ý khác: "Sorry, I can\'t. I have to work. Maybe next week?"',
+      ex: [
+        "Sure, I'd love to! | Được chứ, mình rất muốn!",
+        "Sorry, I can't. I have to work late. | Xin lỗi, mình không được. Mình phải làm muộn.",
+        "That sounds great, but I'm busy. Maybe next time? | Nghe hay đấy, nhưng mình bận. Để lần sau nhé?",
+      ],
+    },
+    {
+      form: 'What time / Where shall we meet?',
+      vi: 'Chốt giờ và chỗ hẹn',
+      note: '"Shall we…?" dùng để hỏi ý kiến khi cùng lên kế hoạch.',
+      ex: [
+        'What time shall we meet? | Mấy giờ mình gặp nhau?',
+        'Where shall we meet? | Mình gặp nhau ở đâu?',
+        "Let's meet at the café at six. | Gặp nhau ở quán cà phê lúc sáu giờ nhé.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Weekend plans',
+      vi: 'Kế hoạch cuối tuần',
+      a: 'Quan',
+      b: 'Mia',
+      lines: [
+        'A: Hi Mia! Are you free this Saturday? | Chào Mia! Thứ Bảy này bạn rảnh không?',
+        'B: I think so. Why? | Chắc là rảnh. Sao vậy?',
+        'A: Would you like to see a movie with me? | Bạn có muốn đi xem phim với mình không?',
+        "B: Sure, I'd love to! What time shall we meet? | Được chứ, mình rất muốn! Mấy giờ mình gặp nhau?",
+        "A: How about seven o'clock at the cinema? | Bảy giờ ở rạp chiếu phim nhé?",
+        "B: Perfect. Let's have dinner before the movie too. | Tuyệt. Mình ăn tối trước khi xem phim luôn nhé.",
+        'A: Great idea! See you on Saturday. | Ý hay đấy! Hẹn gặp bạn thứ Bảy.',
+      ],
+    },
+    {
+      title: 'Changing plans',
+      vi: 'Đổi lịch hẹn',
+      a: 'Ben',
+      b: 'Hoa',
+      lines: [
+        "A: Hi Hoa, it's Ben. Sorry, I can't meet you tonight. | Chào Hoa, Ben đây. Xin lỗi, tối nay mình không gặp bạn được.",
+        "B: Oh, that's OK. What happened? | Ồ, không sao. Có chuyện gì vậy?",
+        'A: I have to finish a report for my boss. | Mình phải làm xong báo cáo cho sếp.',
+        'B: No problem. Can we meet tomorrow instead? | Không sao. Mình gặp nhau ngày mai được không?',
+        'A: Yes, tomorrow is fine. Same time, same place? | Được, mai ổn. Cùng giờ, cùng chỗ nhé?',
+        'B: Sounds good. See you tomorrow! | Nghe được đấy. Mai gặp nhé!',
+      ],
+    },
+  ],
+  tip: 'Người phương Tây rất coi trọng đúng giờ. Nếu đến muộn, nên nhắn trước: "Sorry, I\'m running late. I\'ll be there in ten minutes."',
+});

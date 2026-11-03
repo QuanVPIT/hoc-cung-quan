@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 5,
+  stage: 1,
+  level: 'A1',
+  emoji: '⏰',
+  title: 'Daily Routine',
+  vi: 'Một ngày của tôi',
+  goal: 'Kể thói quen hằng ngày và nói mức độ thường xuyên.',
+  words: [
+    'get up | thức dậy | ɡet ʌp | ⏰ | I get up at six every day. | Tôi dậy lúc sáu giờ mỗi ngày.',
+    'breakfast | bữa sáng | ˈbrekfəst | 🍳 | I have breakfast at home. | Tôi ăn sáng ở nhà.',
+    'shower | tắm vòi sen | ˈʃaʊər | 🚿 | I take a shower in the morning. | Tôi tắm vào buổi sáng.',
+    'go to work | đi làm | ɡoʊ tə wɜːrk | 🏃 | I go to work by motorbike. | Tôi đi làm bằng xe máy.',
+    'lunch | bữa trưa | lʌntʃ | 🍱 | We have lunch at noon. | Chúng tôi ăn trưa lúc giữa trưa.',
+    'dinner | bữa tối | ˈdɪnər | 🍲 | My family has dinner together. | Gia đình tôi ăn tối cùng nhau.',
+    'cook | nấu ăn | kʊk | 👨‍🍳 | I cook dinner on weekdays. | Tôi nấu bữa tối vào các ngày trong tuần.',
+    'watch TV | xem TV | wɑːtʃ ˌtiːˈviː | 📺 | We watch TV after dinner. | Chúng tôi xem TV sau bữa tối.',
+    'exercise | tập thể dục | ˈeksərsaɪz | 🏋️ | I exercise three times a week. | Tôi tập thể dục ba lần một tuần.',
+    'go to bed | đi ngủ | ɡoʊ tə bed | 🌛 | I usually go to bed at eleven. | Tôi thường đi ngủ lúc mười một giờ.',
+    'always | luôn luôn | ˈɔːlweɪz | ♾️ | I always drink coffee in the morning. | Tôi luôn uống cà phê vào buổi sáng.',
+    'usually | thường thường | ˈjuːʒuəli | 📊 | I usually walk to the office. | Tôi thường đi bộ đến văn phòng.',
+    'sometimes | thỉnh thoảng | ˈsʌmtaɪmz | 🎲 | Sometimes I work late. | Thỉnh thoảng tôi làm muộn.',
+    'never | không bao giờ | ˈnevər | 🚫 | I never skip breakfast. | Tôi không bao giờ bỏ bữa sáng.',
+    'early | sớm | ˈɜːrli | 🐓 | She goes to bed early. | Cô ấy đi ngủ sớm.',
+  ],
+  patterns: [
+    {
+      form: 'I + động từ + at + giờ.',
+      vi: 'Kể thói quen hằng ngày',
+      note: 'Thì hiện tại đơn dùng cho việc lặp lại mỗi ngày. Nhớ he/she thêm -s: I get up → she gets up.',
+      ex: [
+        'I get up at six thirty. | Tôi dậy lúc sáu rưỡi.',
+        'She starts work at eight. | Cô ấy bắt đầu làm lúc tám giờ.',
+        'We have dinner at seven. | Chúng tôi ăn tối lúc bảy giờ.',
+      ],
+    },
+    {
+      form: 'always / usually / sometimes / never + động từ',
+      vi: 'Mức độ thường xuyên',
+      note: 'Trạng từ tần suất đứng TRƯỚC động từ thường (I always walk) nhưng SAU "be" (I am always busy).',
+      ex: [
+        'I usually have breakfast at home. | Tôi thường ăn sáng ở nhà.',
+        'He never eats meat. | Anh ấy không bao giờ ăn thịt.',
+        "I'm always tired on Monday. | Thứ Hai tôi lúc nào cũng mệt.",
+      ],
+    },
+    {
+      form: 'What time do you …?',
+      vi: 'Hỏi giờ làm việc gì',
+      note: 'What time + do/does + người + động từ? Với he/she dùng "does", động từ giữ nguyên.',
+      ex: [
+        'What time do you get up? | Bạn dậy lúc mấy giờ?',
+        'What time does the shop open? | Cửa hàng mở cửa lúc mấy giờ?',
+        'What time do you finish work? | Mấy giờ bạn tan làm?',
+      ],
+    },
+    {
+      form: 'How often do you …? — once / twice / three times a week',
+      vi: 'Hỏi bao lâu một lần',
+      note: 'once = 1 lần, twice = 2 lần, từ 3 trở đi: three times. "a week" = mỗi tuần, "a day" = mỗi ngày.',
+      ex: [
+        'How often do you exercise? | Bạn tập thể dục bao lâu một lần?',
+        'Twice a week. | Hai lần một tuần.',
+        'I call my parents once a day. | Tôi gọi cho bố mẹ mỗi ngày một lần.',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Early bird',
+      vi: 'Người dậy sớm',
+      a: 'Jack',
+      b: 'Quan',
+      lines: [
+        'A: You look fresh! What time do you get up? | Trông anh tươi tỉnh quá! Anh dậy lúc mấy giờ?',
+        'B: I always get up at five thirty. | Tôi luôn dậy lúc năm rưỡi.',
+        "A: Wow, that's early! What do you do in the morning? | Chà, sớm thế! Buổi sáng anh làm gì?",
+        'B: I exercise for thirty minutes, then I have breakfast with my family. | Tôi tập thể dục ba mươi phút, rồi ăn sáng với gia đình.',
+        'A: I usually get up at eight. I never have time for breakfast. | Tôi thường dậy lúc tám giờ. Tôi chẳng bao giờ có thời gian ăn sáng.',
+        'B: Try going to bed early. It really helps! | Thử đi ngủ sớm xem. Thật sự có ích đấy!',
+      ],
+    },
+    {
+      title: 'After work',
+      vi: 'Sau giờ làm',
+      a: 'Linh',
+      b: 'Tom',
+      lines: [
+        'A: What do you usually do after work, Tom? | Tom thường làm gì sau giờ làm?',
+        'B: I go to the gym three times a week. | Mình đi tập gym ba lần một tuần.',
+        "A: That's great. How about the other days? | Hay đấy. Còn những ngày khác?",
+        'B: I cook dinner and watch TV. Sometimes I read. | Mình nấu bữa tối và xem TV. Thỉnh thoảng mình đọc sách.',
+        'A: Me too. I love cooking Vietnamese food. | Mình cũng vậy. Mình thích nấu món Việt.',
+        'B: Really? Can you teach me sometime? | Thật à? Hôm nào dạy mình được không?',
+        'A: Sure! | Được chứ!',
+      ],
+    },
+  ],
+  tip: 'Mẹo nhớ tần suất: always 100% → usually 80% → often 60% → sometimes 40% → rarely 10% → never 0%.',
+});

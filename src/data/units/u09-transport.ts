@@ -1,0 +1,103 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 9,
+  stage: 2,
+  level: 'A1+',
+  emoji: '🚆',
+  title: 'Transport',
+  vi: 'Đi lại & phương tiện',
+  goal: 'Nói đi bằng gì, mua vé, hỏi giờ chạy và thời gian di chuyển.',
+  words: [
+    'bus | xe buýt | bʌs | 🚌 | I take the bus to work. | Tôi đi xe buýt đi làm.',
+    "taxi | taxi | ˈtæksi | 🚕 | Let's take a taxi. | Mình bắt taxi đi.",
+    'train | tàu hỏa | treɪn | 🚆 | The train leaves at noon. | Tàu rời đi lúc trưa.',
+    'plane | máy bay | pleɪn | ✈️ | The plane is late. | Máy bay bị trễ.',
+    'motorbike | xe máy | ˈmoʊtərbaɪk | 🛵 | Most people in Vietnam ride a motorbike. | Hầu hết người Việt đi xe máy.',
+    'ticket | vé | ˈtɪkɪt | 🎫 | One ticket to Hue, please. | Cho một vé đi Huế.',
+    'station | nhà ga, bến | ˈsteɪʃn | 🚉 | The bus station is near here. | Bến xe buýt ở gần đây.',
+    'airport | sân bay | ˈerpɔːrt | 🛫 | Take me to the airport, please. | Làm ơn đưa tôi ra sân bay.',
+    'leave | rời đi, khởi hành | liːv | 🚪 | What time does the bus leave? | Mấy giờ xe buýt chạy?',
+    'arrive | đến nơi | əˈraɪv | 🏁 | We arrive in Da Nang at six. | Chúng tôi đến Đà Nẵng lúc sáu giờ.',
+    "late | trễ, muộn | leɪt | 🐢 | Sorry, I'm late. | Xin lỗi, tôi đến muộn.",
+    'traffic jam | kẹt xe | ˈtræfɪk dʒæm | 🚥 | There is a traffic jam on this road. | Đường này đang kẹt xe.',
+    'return | khứ hồi; quay lại | rɪˈtɜːrn | ↩️ | A return ticket, please. | Cho một vé khứ hồi.',
+    'seat | chỗ ngồi | siːt | 💺 | Is this seat free? | Chỗ này có ai ngồi không?',
+    'platform | sân ga | ˈplætfɔːrm | 🛤️ | The train leaves from platform three. | Tàu khởi hành từ sân ga số ba.',
+  ],
+  patterns: [
+    {
+      form: 'I go to … by + phương tiện.',
+      vi: 'Đi bằng gì',
+      note: 'by bus, by train, by car — không có "the". Ngoại lệ: on foot (đi bộ).',
+      ex: [
+        'I go to work by bus. | Tôi đi làm bằng xe buýt.',
+        'She goes to school on foot. | Cô ấy đi bộ đến trường.',
+        'We travel to Hue by train. | Chúng tôi đi Huế bằng tàu hỏa.',
+      ],
+    },
+    {
+      form: 'What time does … leave / arrive?',
+      vi: 'Hỏi giờ chạy, giờ đến',
+      note: 'Lịch trình cố định dùng thì hiện tại đơn: The train leaves at 7.',
+      ex: [
+        'What time does the next bus leave? | Chuyến xe buýt tiếp theo chạy lúc mấy giờ?',
+        'The flight arrives at ten fifteen. | Chuyến bay đến lúc mười giờ mười lăm.',
+        'When does the last train leave? | Chuyến tàu cuối chạy lúc nào?',
+      ],
+    },
+    {
+      form: 'A one-way / return ticket to …, please.',
+      vi: 'Mua vé',
+      note: 'one-way = một chiều. return (Anh) / round-trip (Mỹ) = khứ hồi.',
+      ex: [
+        'A one-way ticket to Hai Phong, please. | Cho một vé một chiều đi Hải Phòng.',
+        'Two return tickets to Hue, please. | Cho hai vé khứ hồi đi Huế.',
+        'How much is a round-trip ticket? | Vé khứ hồi bao nhiêu tiền?',
+      ],
+    },
+    {
+      form: 'How long does it take? — It takes about …',
+      vi: 'Mất bao lâu',
+      note: 'It takes + thời gian (+ to + động từ): It takes two hours to get there.',
+      ex: [
+        'How long does it take to get to the airport? | Ra sân bay mất bao lâu?',
+        'It takes about forty minutes by taxi. | Đi taxi mất khoảng bốn mươi phút.',
+        'It takes me one hour to get to work. | Tôi mất một tiếng để đi làm.',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'At the train station',
+      vi: 'Ở ga tàu',
+      a: 'Quan',
+      b: 'Clerk',
+      lines: [
+        'A: Good morning. A return ticket to Hue, please. | Chào buổi sáng. Cho tôi một vé khứ hồi đi Huế.',
+        'B: For today? | Đi hôm nay ạ?',
+        'A: Yes. What time does the next train leave? | Vâng. Chuyến tàu tiếp theo chạy lúc mấy giờ?',
+        'B: It leaves at one fifteen from platform two. | Tàu chạy lúc một giờ mười lăm từ sân ga số hai.',
+        'A: How long does it take? | Đi mất bao lâu?',
+        'B: About fourteen hours. | Khoảng mười bốn tiếng.',
+        'A: OK. How much is it? | Được. Bao nhiêu tiền?',
+        'B: One million two hundred thousand dong. | Một triệu hai trăm nghìn đồng.',
+      ],
+    },
+    {
+      title: 'In a taxi',
+      vi: 'Trên taxi',
+      a: 'Driver',
+      b: 'Anna',
+      lines: [
+        'A: Where to, madam? | Chị đi đâu ạ?',
+        'B: To the airport, please. My flight leaves at five. | Ra sân bay. Chuyến bay của tôi cất cánh lúc năm giờ.',
+        "A: There's a traffic jam on the main road. I'll take another way. | Đường chính đang kẹt xe. Tôi sẽ đi đường khác.",
+        'B: Thanks. How long does it take? | Cảm ơn. Mất bao lâu?',
+        "A: About thirty minutes. Don't worry, you won't be late. | Khoảng ba mươi phút. Đừng lo, chị không bị trễ đâu.",
+        'B: Great, thank you! | Tuyệt, cảm ơn anh!',
+      ],
+    },
+  ],
+  tip: 'Người Anh nói "return ticket", người Mỹ nói "round-trip ticket" — cùng nghĩa là vé khứ hồi.',
+});

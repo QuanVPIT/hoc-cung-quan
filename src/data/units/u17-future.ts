@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 17,
+  stage: 4,
+  level: 'A2+',
+  emoji: '🚀',
+  title: 'Future Plans',
+  vi: 'Kế hoạch tương lai',
+  goal: 'Nói về kế hoạch, dự định, lời hứa và mong muốn trong tương lai.',
+  words: [
+    'future | tương lai | ˈfjuːtʃər | 🔮 | What are your plans for the future? | Kế hoạch tương lai của bạn là gì?',
+    "next | tới, kế tiếp | nekst | ⏭️ | I'm going to visit Japan next year. | Năm tới tôi sẽ đi Nhật.",
+    'going to | sẽ, định (kế hoạch) | ˈɡoʊɪŋ tə | 🗺️ | We are going to move to a new apartment. | Chúng tôi định chuyển đến căn hộ mới.',
+    'will | sẽ | wɪl | 🙋‍♂️ | I think it will be fine. | Tôi nghĩ mọi chuyện sẽ ổn.',
+    'hope | hy vọng | hoʊp | 🌈 | I hope to see you again soon. | Tôi hy vọng sớm gặp lại bạn.',
+    'dream | ước mơ | driːm | 💭 | My dream is to open a coffee shop. | Ước mơ của tôi là mở một quán cà phê.',
+    'goal | mục tiêu | ɡoʊl | 🎯 | My goal is to speak English well. | Mục tiêu của tôi là nói tiếng Anh giỏi.',
+    'save | tiết kiệm | seɪv | 🐷 | I want to save money for a trip. | Tôi muốn tiết kiệm tiền cho một chuyến đi.',
+    'learn | học | lɜːrn | 🎓 | I want to learn how to cook. | Tôi muốn học nấu ăn.',
+    "start | bắt đầu | stɑːrt | 🏳️ | I'm going to start a new job. | Tôi sắp bắt đầu công việc mới.",
+    'soon | sớm, sắp | suːn | ⏩ | See you soon! | Hẹn sớm gặp lại!',
+    "probably | có lẽ, chắc là | ˈprɑːbəbli | 🤷 | I'll probably stay at home. | Chắc là tôi sẽ ở nhà.",
+    "decide | quyết định | dɪˈsaɪd | ⚖️ | I can't decide where to go. | Tôi không quyết định được nên đi đâu.",
+    "promise | hứa | ˈprɑːmɪs | 🤞 | I promise I'll call you. | Tôi hứa sẽ gọi cho bạn.",
+    'holiday | kỳ nghỉ | ˈhɑːlədeɪ | 🏝️ | Where are you going for the holiday? | Bạn đi đâu vào kỳ nghỉ?',
+  ],
+  patterns: [
+    {
+      form: 'be going to + động từ',
+      vi: 'Kế hoạch đã định',
+      note: 'Dùng cho việc đã quyết định từ trước: "I\'m going to study abroad next year."',
+      ex: [
+        "I'm going to visit my parents this weekend. | Cuối tuần này tôi sẽ về thăm bố mẹ.",
+        "She's going to take a new course. | Cô ấy sắp học một khóa học mới.",
+        'What are you going to do tomorrow? | Ngày mai bạn định làm gì?',
+      ],
+    },
+    {
+      form: 'will + động từ',
+      vi: 'Quyết định tức thời, dự đoán, lời hứa',
+      note: 'Quyết định ngay lúc nói: "I\'ll help you." Dự đoán: "It will be fun." Hứa: "I\'ll call you." Phủ định: won\'t = will not.',
+      ex: [
+        "I'll carry your bag. | Để tôi xách túi giúp bạn.",
+        "I think you'll love Hoi An. | Tôi nghĩ bạn sẽ thích Hội An.",
+        "I won't be late, I promise. | Tôi sẽ không đến muộn đâu, tôi hứa.",
+      ],
+    },
+    {
+      form: 'be + V-ing (lịch đã hẹn)',
+      vi: 'Lịch đã sắp xếp',
+      note: 'Hiện tại tiếp diễn cũng dùng cho tương lai khi đã có lịch cụ thể: "I\'m meeting Tom at six."',
+      ex: [
+        "I'm meeting my boss tomorrow morning. | Sáng mai tôi gặp sếp.",
+        "We're flying to Bangkok on Friday. | Thứ Sáu chúng tôi bay đi Bangkok.",
+        'What are you doing tonight? | Tối nay bạn làm gì?',
+      ],
+    },
+    {
+      form: "I hope to / I want to / I'd like to + động từ",
+      vi: 'Mong muốn',
+      note: 'Ba cách nói về mong muốn, đều theo sau bởi "to + động từ". "I\'d like to" lịch sự nhất.',
+      ex: [
+        'I hope to get a promotion this year. | Tôi hy vọng được thăng chức năm nay.',
+        'I want to travel around the world. | Tôi muốn đi du lịch vòng quanh thế giới.',
+        "I'd like to learn Japanese one day. | Một ngày nào đó tôi muốn học tiếng Nhật.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'New Year plans',
+      vi: 'Kế hoạch năm mới',
+      a: 'Julia',
+      b: 'Quan',
+      lines: [
+        'A: Do you have any plans for next year, Quan? | Năm tới anh có kế hoạch gì không, Quân?',
+        "B: Yes! I'm going to improve my English. | Có! Tôi sẽ cải thiện tiếng Anh.",
+        "A: That's a great goal. How are you going to do it? | Mục tiêu hay đấy. Anh định làm thế nào?",
+        "B: I'll study for twenty minutes every day with an app. | Tôi sẽ học hai mươi phút mỗi ngày với một ứng dụng.",
+        'A: Good idea. Do you want to travel too? | Ý hay. Anh có muốn đi du lịch nữa không?',
+        'B: Yes, I hope to visit Australia with my family. | Có, tôi hy vọng đi Úc cùng gia đình.',
+        "A: You'll love it. I promise! | Anh sẽ thích lắm. Tôi đảm bảo!",
+      ],
+    },
+    {
+      title: 'This weekend',
+      vi: 'Cuối tuần này',
+      a: 'Duc',
+      b: 'Amy',
+      lines: [
+        'A: What are you doing this weekend, Amy? | Cuối tuần này Amy làm gì?',
+        "B: I'm meeting some friends on Saturday. We're going to have a picnic. | Thứ Bảy mình gặp mấy người bạn. Tụi mình sẽ đi dã ngoại.",
+        'A: Sounds fun. Where are you going? | Nghe vui đấy. Các bạn đi đâu?',
+        'B: Probably to West Lake. Would you like to come? | Chắc là ra Hồ Tây. Bạn có muốn đi cùng không?',
+        "A: I'd love to! I'll bring some snacks. | Mình rất muốn! Mình sẽ mang đồ ăn vặt.",
+        "B: Great! I'll text you the time. | Tuyệt! Mình sẽ nhắn giờ cho bạn.",
+      ],
+    },
+  ],
+  tip: 'Phân biệt nhanh: kế hoạch đã nghĩ trước → going to; quyết định ngay lúc nói → will. Ví dụ: "The phone is ringing." — "I\'ll get it!"',
+});

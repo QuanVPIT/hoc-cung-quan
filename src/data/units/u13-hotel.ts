@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 13,
+  stage: 3,
+  level: 'A2',
+  emoji: '🏨',
+  title: 'At the Hotel',
+  vi: 'Ở khách sạn',
+  goal: 'Đặt phòng, nhận và trả phòng, hỏi dịch vụ và báo sự cố.',
+  words: [
+    'hotel | khách sạn | hoʊˈtel | 🏨 | We stay at a hotel near the beach. | Chúng tôi ở khách sạn gần biển.',
+    "book | đặt (phòng, vé) | bʊk | 📖 | I'd like to book a room. | Tôi muốn đặt một phòng.",
+    'reservation | sự đặt chỗ | ˌrezərˈveɪʃn | 🗂️ | I have a reservation for tonight. | Tôi có đặt phòng cho tối nay.',
+    'check in | nhận phòng | tʃek ɪn | 🛎️ | What time can I check in? | Mấy giờ tôi có thể nhận phòng?',
+    'check out | trả phòng | tʃek aʊt | 🧳 | We check out at noon. | Chúng tôi trả phòng lúc trưa.',
+    'single room | phòng đơn | ˈsɪŋɡl ruːm | 🛏️ | Do you have a single room for tonight? | Còn phòng đơn cho tối nay không?',
+    'double room | phòng đôi | ˈdʌbl ruːm | 🛌 | A double room for two nights, please. | Cho một phòng đôi trong hai đêm.',
+    'night | đêm | naɪt | 🌃 | How much is it per night? | Bao nhiêu tiền một đêm?',
+    'key | chìa khóa | kiː | 🔑 | Here is your room key. | Đây là chìa khóa phòng của anh.',
+    'floor | tầng | flɔːr | 🪜 | Your room is on the third floor. | Phòng của anh ở tầng ba.',
+    'included | đã bao gồm | ɪnˈkluːdɪd | ➕ | Is breakfast included? | Có bao gồm bữa sáng không?',
+    'towel | khăn tắm | ˈtaʊəl | 🧺 | Can I have an extra towel? | Cho tôi thêm một cái khăn tắm.',
+    "air conditioner | máy lạnh | ˈer kəndɪʃənər | ❄️ | The air conditioner doesn't work. | Máy lạnh không hoạt động.",
+    "Wi-Fi | mạng Wi-Fi | ˈwaɪ faɪ | 📡 | What's the Wi-Fi password? | Mật khẩu Wi-Fi là gì?",
+    "problem | vấn đề | ˈprɑːbləm | ⚠️ | There's a problem with my room. | Phòng của tôi có vấn đề.",
+  ],
+  patterns: [
+    {
+      form: "I'd like to book a … for … nights.",
+      vi: 'Đặt phòng',
+      note: 'Nói đủ: loại phòng + số đêm + ngày. "from … to …" = từ ngày… đến ngày…',
+      ex: [
+        "I'd like to book a double room for three nights. | Tôi muốn đặt một phòng đôi trong ba đêm.",
+        'Do you have any rooms available? | Còn phòng trống không?',
+        'From May tenth to May twelfth. | Từ ngày mười đến ngày mười hai tháng Năm.',
+      ],
+    },
+    {
+      form: 'I have a reservation under the name …',
+      vi: 'Nhận phòng đã đặt',
+      note: '"under the name…" = đặt dưới tên… Nhân viên thường hỏi thêm: "Can I see your passport?"',
+      ex: [
+        'Hi, I have a reservation under the name Quan Pham. | Chào, tôi có đặt phòng dưới tên Phạm Quân.',
+        'Can I see your passport, please? | Cho tôi xem hộ chiếu của anh được không?',
+        "Here's your key card. | Đây là thẻ phòng của anh.",
+      ],
+    },
+    {
+      form: 'Is … included? / What time is …?',
+      vi: 'Hỏi về dịch vụ',
+      note: 'Hỏi những thứ hay bị tính thêm tiền: breakfast, Wi-Fi, parking, airport pickup.',
+      ex: [
+        'Is breakfast included in the price? | Giá đã bao gồm bữa sáng chưa?',
+        'What time is breakfast served? | Bữa sáng phục vụ lúc mấy giờ?',
+        'Is there free parking? | Có chỗ đỗ xe miễn phí không?',
+      ],
+    },
+    {
+      form: "The … doesn't work. / There's no …",
+      vi: 'Báo sự cố',
+      note: '"doesn\'t work" = bị hỏng, không chạy. Nhớ nói kèm số phòng: "This is room 305."',
+      ex: [
+        "The shower doesn't work. | Vòi sen bị hỏng.",
+        "There's no hot water in my room. | Phòng tôi không có nước nóng.",
+        'Could you send someone to fix it? | Bạn cử người lên sửa được không?',
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Checking in',
+      vi: 'Nhận phòng',
+      a: 'Receptionist',
+      b: 'Quan',
+      lines: [
+        'A: Good afternoon. Welcome to Ocean Hotel. | Chào buổi chiều. Chào mừng đến khách sạn Ocean.',
+        'B: Hi. I have a reservation under the name Quan Pham. | Chào. Tôi có đặt phòng dưới tên Phạm Quân.',
+        'A: Let me check. Yes, a double room for two nights. Can I see your passport? | Để tôi kiểm tra. Vâng, phòng đôi hai đêm. Cho tôi xem hộ chiếu được không?',
+        'B: Here you are. Is breakfast included? | Đây ạ. Có bao gồm bữa sáng không?',
+        "A: Yes, it's served from six to ten on the second floor. | Có, phục vụ từ sáu đến mười giờ ở tầng hai.",
+        "B: Great. And what's the Wi-Fi password? | Tuyệt. Còn mật khẩu Wi-Fi là gì?",
+        "A: It's on your key card. Your room is 512. Enjoy your stay! | Nó ở trên thẻ phòng. Phòng của anh là 512. Chúc anh nghỉ ngơi vui vẻ!",
+      ],
+    },
+    {
+      title: 'A problem in the room',
+      vi: 'Sự cố trong phòng',
+      a: 'Guest',
+      b: 'Receptionist',
+      lines: [
+        "A: Hello, this is room 305. The air conditioner doesn't work. | Xin chào, phòng 305 đây. Máy lạnh bị hỏng.",
+        "B: I'm sorry about that. I'll send someone right away. | Tôi xin lỗi. Tôi sẽ cử người lên ngay.",
+        'A: Thank you. Also, can I have two extra towels? | Cảm ơn. Ngoài ra, cho tôi thêm hai khăn tắm được không?',
+        'B: Of course. Anything else? | Tất nhiên. Còn gì nữa không ạ?',
+        'A: What time do I need to check out tomorrow? | Mai tôi phải trả phòng lúc mấy giờ?',
+        "B: Check-out is at twelve o'clock. | Trả phòng lúc mười hai giờ.",
+      ],
+    },
+  ],
+  tip: 'Khi đặt phòng online, để ý "non-refundable" = không hoàn tiền, "free cancellation" = hủy miễn phí.',
+});

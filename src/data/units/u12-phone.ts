@@ -1,0 +1,103 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 12,
+  stage: 3,
+  level: 'A2',
+  emoji: '📞',
+  title: 'On the Phone',
+  vi: 'Gọi điện thoại',
+  goal: 'Gọi điện, xin gặp người, để lại lời nhắn và xử lý khi nghe không rõ.',
+  words: [
+    "call | gọi điện | kɔːl | 📞 | I'll call you later. | Tôi sẽ gọi cho bạn sau.",
+    'speak | nói chuyện | spiːk | 🗣️ | Can I speak to Mr. Nam, please? | Cho tôi nói chuyện với ông Nam được không?',
+    'hold on | giữ máy | hoʊld ɑːn | ⏸️ | Hold on a moment, please. | Vui lòng giữ máy một chút.',
+    'message | tin nhắn, lời nhắn | ˈmesɪdʒ | ✉️ | Can I leave a message? | Tôi để lại lời nhắn được không?',
+    'call back | gọi lại | kɔːl bæk | 🔙 | Please call back after lunch. | Vui lòng gọi lại sau bữa trưa.',
+    "available | rảnh, có mặt | əˈveɪləbl | ✅ | She isn't available right now. | Cô ấy hiện không có mặt.",
+    'wrong number | gọi nhầm số | rɔːŋ ˈnʌmbər | ❎ | Sorry, you have the wrong number. | Xin lỗi, anh gọi nhầm số rồi.',
+    'line | đường dây | laɪn | ☎️ | The line is busy. | Đường dây đang bận.',
+    'loud | to (âm thanh) | laʊd | 📢 | Can you speak a bit louder? | Bạn nói to hơn chút được không?',
+    'repeat | nhắc lại | rɪˈpiːt | 🔁 | Could you repeat that, please? | Bạn nhắc lại được không?',
+    'spell | đánh vần | spel | 🔤 | How do you spell your name? | Tên bạn đánh vần thế nào?',
+    "text | nhắn tin | tekst | 💬 | I'll text you the address. | Tôi sẽ nhắn địa chỉ cho bạn.",
+    'battery | pin | ˈbætəri | 🔋 | My phone battery is low. | Điện thoại tôi sắp hết pin.',
+    "signal | sóng điện thoại | ˈsɪɡnəl | 📶 | There's no signal here. | Ở đây không có sóng.",
+    'voicemail | hộp thư thoại | ˈvɔɪsmeɪl | 📼 | I left you a voicemail. | Tôi đã để lại tin nhắn thoại cho bạn.',
+  ],
+  patterns: [
+    {
+      form: 'Hello, this is … (speaking).',
+      vi: 'Xưng tên khi gọi điện',
+      note: 'Trên điện thoại nói "This is Quan", KHÔNG nói "I am Quan".',
+      ex: [
+        'Hello, this is Quan from ABC Company. | Xin chào, tôi là Quân từ công ty ABC.',
+        "Hi Lan, it's me, Minh. | Chào Lan, Minh đây.",
+        'Speaking. | Tôi đây (đang nghe máy).',
+      ],
+    },
+    {
+      form: 'Can I speak to …, please?',
+      vi: 'Xin gặp ai đó',
+      note: 'Lịch sự hơn: "Could I speak to…?" hoặc "May I speak to…?"',
+      ex: [
+        'Can I speak to Ms. Hoa, please? | Cho tôi gặp chị Hoa được không?',
+        'Could I speak to the manager? | Tôi có thể nói chuyện với quản lý không?',
+        "Who's calling, please? | Xin hỏi ai đang gọi ạ?",
+      ],
+    },
+    {
+      form: 'Can I take / leave a message?',
+      vi: 'Nhận / để lại lời nhắn',
+      note: 'take a message = ghi lại lời nhắn (người nghe máy). leave a message = để lại lời nhắn (người gọi).',
+      ex: [
+        "She's not here. Can I take a message? | Cô ấy không có ở đây. Tôi ghi lời nhắn được không?",
+        'Can I leave a message for him? | Tôi để lại lời nhắn cho anh ấy được không?',
+        'Please ask him to call me back. | Làm ơn nhờ anh ấy gọi lại cho tôi.',
+      ],
+    },
+    {
+      form: 'Sorry, could you repeat that / speak more slowly?',
+      vi: 'Khi nghe không rõ',
+      note: 'Đừng ngại yêu cầu nhắc lại — người bản xứ cũng làm vậy khi gọi điện.',
+      ex: [
+        'Sorry, could you say that again? | Xin lỗi, bạn nói lại được không?',
+        'Could you speak more slowly, please? | Bạn nói chậm hơn được không?',
+        "Sorry, the signal is bad. I can't hear you. | Xin lỗi, sóng yếu. Tôi không nghe được.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'Calling a company',
+      vi: 'Gọi đến công ty',
+      a: 'Receptionist',
+      b: 'Quan',
+      lines: [
+        'A: Good morning, Sunrise Company. How can I help you? | Chào buổi sáng, công ty Sunrise. Tôi giúp gì được ạ?',
+        'B: Hello, this is Quan from Blue Tech. Can I speak to Ms. Smith, please? | Xin chào, tôi là Quân từ Blue Tech. Cho tôi gặp bà Smith được không?',
+        "A: Hold on, please. I'm sorry, she's in a meeting right now. | Vui lòng giữ máy. Xin lỗi, bà ấy đang họp.",
+        'B: I see. Can I leave a message? | Tôi hiểu. Tôi để lại lời nhắn được không?',
+        'A: Of course. | Tất nhiên ạ.',
+        'B: Please ask her to call me back this afternoon. | Làm ơn nhờ bà ấy gọi lại cho tôi chiều nay.',
+        'A: Sure. Could you spell your name, please? | Vâng. Anh đánh vần tên giúp tôi được không?',
+        'B: Q, U, A, N. Quan. | Q, U, A, N. Quân.',
+      ],
+    },
+    {
+      title: 'Bad signal',
+      vi: 'Sóng yếu',
+      a: 'Tom',
+      b: 'Linh',
+      lines: [
+        "A: Hi Linh, it's Tom. Are you free to talk? | Chào Linh, Tom đây. Bạn nói chuyện được không?",
+        "B: Hi Tom! Sorry, I can't hear you well. | Chào Tom! Xin lỗi, mình nghe không rõ.",
+        'A: Can you hear me now? | Giờ bạn nghe được không?',
+        'B: A little. The signal is bad here, and my battery is low. | Một chút. Ở đây sóng yếu, và điện thoại mình sắp hết pin.',
+        "A: OK, I'll text you. | Được, mình sẽ nhắn tin cho bạn.",
+        'B: Thanks, Tom. Talk to you later! | Cảm ơn Tom. Nói chuyện sau nhé!',
+      ],
+    },
+  ],
+  tip: 'Đánh vần tên qua điện thoại dễ nhầm. Mẹo: gắn mỗi chữ với một từ — "Q for Queen, U for Umbrella, A for Apple, N for Nose."',
+});

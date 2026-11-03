@@ -1,0 +1,101 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 8,
+  stage: 2,
+  level: 'A1+',
+  emoji: '🧭',
+  title: 'Directions',
+  vi: 'Hỏi đường',
+  goal: 'Hỏi đường, chỉ đường và mô tả vị trí đơn giản.',
+  words: [
+    'street | đường phố | striːt | 🛣️ | The hotel is on Le Loi Street. | Khách sạn ở đường Lê Lợi.',
+    'turn left | rẽ trái | tɜːrn left | ⬅️ | Turn left at the bank. | Rẽ trái ở chỗ ngân hàng.',
+    'turn right | rẽ phải | tɜːrn raɪt | ➡️ | Turn right at the second street. | Rẽ phải ở con đường thứ hai.',
+    'go straight | đi thẳng | ɡoʊ streɪt | ⬆️ | Go straight ahead until you see a big hotel. | Đi thẳng đến khi thấy một khách sạn lớn.',
+    'corner | góc đường | ˈkɔːrnər | 📐 | The café is on the corner. | Quán cà phê ở góc đường.',
+    'traffic lights | đèn giao thông | ˈtræfɪk laɪts | 🚦 | Stop at the traffic lights. | Dừng lại ở đèn giao thông.',
+    'next to | bên cạnh | nekst tuː | ↔️ | The pharmacy is next to the bank. | Hiệu thuốc ở bên cạnh ngân hàng.',
+    'opposite | đối diện | ˈɑːpəzɪt | 🔀 | The post office is opposite the park. | Bưu điện ở đối diện công viên.',
+    'near | gần | nɪr | 📍 | Is there an ATM near here? | Gần đây có cây ATM không?',
+    'far | xa | fɑːr | 🔭 | Is it far from here? | Nó có xa đây không?',
+    'map | bản đồ | mæp | 🗺️ | Can you show me on the map? | Bạn chỉ cho tôi trên bản đồ được không?',
+    "lost | lạc đường | lɔːst | 😕 | Excuse me, I'm lost. | Xin lỗi, tôi bị lạc.",
+    'bank | ngân hàng | bæŋk | 🏦 | Is the bank open now? | Ngân hàng giờ có mở không?',
+    "park | công viên | pɑːrk | 🌳 | Let's meet in the park. | Hẹn gặp ở công viên nhé.",
+    "block | dãy nhà (giữa hai ngã tư) | blɑːk | 🧱 | Walk two blocks and you'll see it. | Đi bộ qua hai dãy nhà là bạn sẽ thấy.",
+  ],
+  patterns: [
+    {
+      form: 'Excuse me, where is …? / How do I get to …?',
+      vi: 'Hỏi đường',
+      note: 'Mở đầu bằng "Excuse me" cho lịch sự. "How do I get to…?" = làm sao để đến…',
+      ex: [
+        'Excuse me, where is the train station? | Xin lỗi, ga tàu ở đâu ạ?',
+        'How do I get to the museum? | Làm sao để đến bảo tàng?',
+        'Is there a pharmacy near here? | Gần đây có hiệu thuốc không?',
+      ],
+    },
+    {
+      form: 'Go straight / Turn left / Turn right + at …',
+      vi: 'Chỉ đường',
+      note: 'Câu mệnh lệnh bắt đầu bằng động từ, không cần chủ ngữ. "at" + điểm mốc: at the corner, at the traffic lights.',
+      ex: [
+        'Go straight and turn left at the corner. | Đi thẳng rồi rẽ trái ở góc đường.',
+        'Take the second right. | Rẽ phải ở ngã thứ hai.',
+        "Cross the street and you'll see it. | Băng qua đường là bạn sẽ thấy.",
+      ],
+    },
+    {
+      form: "It's next to / opposite / between …",
+      vi: 'Mô tả vị trí',
+      note: 'next to = bên cạnh, opposite = đối diện, between A and B = giữa A và B, behind = phía sau, in front of = phía trước.',
+      ex: [
+        "It's next to the supermarket. | Nó ở cạnh siêu thị.",
+        'The bank is between the hotel and the café. | Ngân hàng ở giữa khách sạn và quán cà phê.',
+        'The parking lot is behind the building. | Bãi đỗ xe ở phía sau tòa nhà.',
+      ],
+    },
+    {
+      form: "How far is it? — It's about … minutes on foot.",
+      vi: 'Hỏi khoảng cách',
+      note: 'on foot = đi bộ, by taxi = đi taxi, about = khoảng.',
+      ex: [
+        'How far is it? | Nó cách bao xa?',
+        "It's about five minutes on foot. | Đi bộ khoảng năm phút.",
+        "It's too far to walk. Take a taxi. | Đi bộ xa quá. Bắt taxi đi.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: "I'm lost",
+      vi: 'Tôi bị lạc',
+      a: 'Tourist',
+      b: 'Quan',
+      lines: [
+        "A: Excuse me, I'm lost. How do I get to the Old Quarter? | Xin lỗi, tôi bị lạc. Làm sao để đến Phố Cổ?",
+        'B: Go straight for two blocks, then turn left at the traffic lights. | Đi thẳng qua hai dãy nhà, rồi rẽ trái ở đèn giao thông.',
+        'A: Left at the traffic lights. Is it far? | Rẽ trái ở đèn giao thông. Có xa không?',
+        "B: No, it's about ten minutes on foot. | Không, đi bộ khoảng mười phút.",
+        'A: Thank you so much! | Cảm ơn anh nhiều!',
+        "B: You're welcome. Enjoy your trip! | Không có gì. Chúc chuyến đi vui vẻ!",
+      ],
+    },
+    {
+      title: 'Looking for an ATM',
+      vi: 'Tìm cây ATM',
+      a: 'Mark',
+      b: 'Linh',
+      lines: [
+        'A: Sorry to bother you. Is there an ATM near here? | Xin lỗi làm phiền. Gần đây có cây ATM không?',
+        "B: Yes, there's one in the bank on the corner. | Có, có một cây trong ngân hàng ở góc đường.",
+        'A: Which corner? | Góc nào ạ?',
+        'B: Can you see the park? The bank is opposite the park. | Bạn thấy công viên không? Ngân hàng ở đối diện công viên.',
+        'A: Oh, I see it. Thanks a lot! | À, tôi thấy rồi. Cảm ơn nhiều!',
+        'B: No problem. | Không có gì.',
+      ],
+    },
+  ],
+  tip: 'Muốn người ta nói chậm lại: "Could you speak more slowly, please?" Muốn họ chỉ trên bản đồ: "Can you show me on the map?"',
+});

@@ -1,0 +1,102 @@
+import { unit } from '../build';
+
+export default unit({
+  no: 19,
+  stage: 4,
+  level: 'A2+',
+  emoji: '🗂️',
+  title: 'At Work',
+  vi: 'Nơi làm việc',
+  goal: 'Nhờ vả đồng nghiệp, báo tiến độ, nêu ý kiến trong cuộc họp và hứa hạn.',
+  words: [
+    'meeting | cuộc họp | ˈmiːtɪŋ | 🧑‍🤝‍🧑 | We have a meeting at nine. | Chúng tôi có cuộc họp lúc chín giờ.',
+    "email | thư điện tử | ˈiːmeɪl | 📧 | I'll send you an email. | Tôi sẽ gửi email cho bạn.",
+    'report | báo cáo | rɪˈpɔːrt | 📊 | Please finish the report by Friday. | Làm ơn hoàn thành báo cáo trước thứ Sáu.',
+    'deadline | hạn chót | ˈdedlaɪn | 🚨 | The deadline is next Monday. | Hạn chót là thứ Hai tới.',
+    "project | dự án | ˈprɑːdʒekt | 🗂️ | I'm working on a new project. | Tôi đang làm một dự án mới.",
+    'team | nhóm, đội | tiːm | 👥 | Our team has six people. | Nhóm chúng tôi có sáu người.',
+    'customer | khách hàng | ˈkʌstəmər | 🙋‍♀️ | The customer is always right. | Khách hàng luôn luôn đúng.',
+    'send | gửi | send | 📤 | Can you send me the file? | Bạn gửi cho tôi tệp được không?',
+    'attach | đính kèm | əˈtætʃ | 📎 | Please attach your CV to the email. | Vui lòng đính kèm CV vào email.',
+    'schedule | lịch trình | ˈskedʒuːl | 📅 | My schedule is full this week. | Lịch của tôi tuần này kín rồi.',
+    'help | giúp đỡ | help | 🆘 | Could you help me with this? | Bạn giúp tôi việc này được không?',
+    'finish | hoàn thành | ˈfɪnɪʃ | ✔️ | I need to finish this today. | Tôi cần làm xong việc này hôm nay.',
+    'agree | đồng ý | əˈɡriː | 🤝 | I agree with you. | Tôi đồng ý với bạn.',
+    "opinion | ý kiến | əˈpɪnjən | 🗨️ | What's your opinion? | Ý kiến của bạn là gì?",
+    'interview | buổi phỏng vấn | ˈɪntərvjuː | 🎙️ | I have a job interview tomorrow. | Ngày mai tôi có buổi phỏng vấn xin việc.',
+  ],
+  patterns: [
+    {
+      form: 'Could you + động từ, please?',
+      vi: 'Nhờ vả lịch sự',
+      note: '"Could you…" lịch sự hơn "Can you…". Đồng ý: "Sure, no problem." / "Of course."',
+      ex: [
+        'Could you send me the report, please? | Bạn gửi cho tôi bản báo cáo được không?',
+        'Could you help me with this email? | Bạn giúp tôi viết email này được không?',
+        'Sure, no problem. | Được chứ, không vấn đề gì.',
+      ],
+    },
+    {
+      form: "I'm working on … / I'm busy with …",
+      vi: 'Nói việc đang làm',
+      note: 'Hiện tại tiếp diễn (am/is/are + V-ing) cho việc đang diễn ra trong khoảng thời gian này.',
+      ex: [
+        "I'm working on the sales report. | Tôi đang làm báo cáo doanh số.",
+        "She's talking to a customer right now. | Cô ấy đang nói chuyện với khách hàng.",
+        "We're preparing for the meeting. | Chúng tôi đang chuẩn bị cho cuộc họp.",
+      ],
+    },
+    {
+      form: 'I think … / In my opinion, … / I agree.',
+      vi: 'Nêu ý kiến',
+      note: 'Không đồng ý một cách lịch sự: "I see your point, but…" (Tôi hiểu ý bạn, nhưng…).',
+      ex: [
+        'I think we need more time. | Tôi nghĩ chúng ta cần thêm thời gian.',
+        'In my opinion, this plan is better. | Theo tôi, kế hoạch này tốt hơn.',
+        "I see your point, but I don't agree. | Tôi hiểu ý bạn, nhưng tôi không đồng ý.",
+      ],
+    },
+    {
+      form: "I'll + động từ + by + thời hạn.",
+      vi: 'Hứa hạn hoàn thành',
+      note: "by + thời điểm = muộn nhất là: by Friday, by five o'clock.",
+      ex: [
+        "I'll send it to you by five o'clock. | Tôi sẽ gửi cho bạn trước năm giờ.",
+        'Can you finish it by tomorrow? | Bạn làm xong trước ngày mai được không?',
+        "I'll get back to you by Monday. | Tôi sẽ phản hồi bạn trước thứ Hai.",
+      ],
+    },
+  ],
+  dialogues: [
+    {
+      title: 'A busy morning',
+      vi: 'Một buổi sáng bận rộn',
+      a: 'Manager',
+      b: 'Quan',
+      lines: [
+        'A: Good morning, Quan. Are you busy? | Chào Quân. Cậu có bận không?',
+        "B: A little. I'm working on the project report. | Hơi bận. Tôi đang làm báo cáo dự án.",
+        'A: When can you finish it? The deadline is Thursday. | Khi nào cậu làm xong? Hạn chót là thứ Năm.',
+        "B: I'll send it to you by Wednesday afternoon. | Tôi sẽ gửi anh trước chiều thứ Tư.",
+        'A: Great. Also, could you join the meeting with the customer at ten? | Tốt. Còn nữa, cậu tham gia cuộc họp với khách hàng lúc mười giờ được không?',
+        'B: Sure, no problem. Should I prepare anything? | Được, không vấn đề. Tôi có cần chuẩn bị gì không?',
+        'A: Just bring your ideas. Thanks! | Chỉ cần mang ý tưởng của cậu. Cảm ơn!',
+      ],
+    },
+    {
+      title: 'In the meeting',
+      vi: 'Trong cuộc họp',
+      a: 'Anna',
+      b: 'Minh',
+      lines: [
+        'A: So, what do you think about the new plan, Minh? | Vậy Minh nghĩ sao về kế hoạch mới?',
+        "B: In my opinion, it's a good plan, but we need more time. | Theo tôi, đó là kế hoạch tốt, nhưng chúng ta cần thêm thời gian.",
+        'A: I see your point. How much time do we need? | Tôi hiểu ý anh. Chúng ta cần bao nhiêu thời gian?',
+        'B: I think two more weeks. | Tôi nghĩ thêm hai tuần nữa.',
+        'A: OK, I agree. Could you update the schedule? | Được, tôi đồng ý. Anh cập nhật lịch trình được không?',
+        "B: Sure. I'll email it to the team by tomorrow. | Được. Tôi sẽ gửi email cho cả nhóm trước ngày mai.",
+      ],
+    },
+  ],
+  tip: 'Email công việc ngắn gọn: mở đầu "Hi [tên]," — nội dung chính — kết thúc "Best regards," + tên. Tránh viết HOA cả câu vì trông như đang quát.',
+});
